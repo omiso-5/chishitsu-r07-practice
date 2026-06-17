@@ -1,0 +1,2650 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>R07 現場調査部門 学習アプリ</title><style>
+:root{--bg:#f6f7fb;--card:#fff;--text:#20242a;--muted:#657080;--line:#dfe3eb;--accent:#2563eb;--ok:#0f9d58;--ng:#d93025;}
+*{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;background:var(--bg);color:var(--text);line-height:1.75;} header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);padding:12px 14px;backdrop-filter:blur(8px)} h1{font-size:18px;margin:0 0 6px}.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.pill{font-size:12px;background:#eef2ff;padding:4px 8px;border-radius:999px}.btn{appearance:none;border:0;border-radius:12px;background:var(--accent);color:#fff;padding:10px 14px;font-weight:700;cursor:pointer}.btn.secondary{background:#64748b}.btn.danger{background:#b91c1c}.container{max-width:980px;margin:0 auto;padding:14px}.notice{background:#fff8e1;border:1px solid #facc15;padding:10px 12px;border-radius:12px;margin:12px 0}.question{background:var(--card);border:1px solid var(--line);border-radius:16px;margin:14px 0;padding:14px;box-shadow:0 2px 8px rgba(15,23,42,.04)}.qhead{display:flex;justify-content:space-between;gap:10px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:10px}.qtitle{font-size:18px;font-weight:800}.tag{font-size:12px;color:#fff;border-radius:999px;padding:3px 8px}.required{background:#2563eb}.groupA{background:#16a34a}.groupB{background:#9333ea}.qtext{white-space:pre-wrap;font-size:15px}.choices{display:grid;grid-template-columns:repeat(4,minmax(60px,1fr));gap:8px;margin-top:12px}.choices label{display:flex;align-items:center;justify-content:center;gap:5px;border:1px solid var(--line);border-radius:12px;padding:10px;background:#f8fafc;font-weight:700}.choices input{transform:scale(1.2)}.result{margin-top:10px;font-weight:800}.result.ok{color:var(--ok)}.result.ng{color:var(--ng)} details{margin-top:10px} summary{cursor:pointer;color:var(--accent);font-weight:700}.pageimg{width:100%;max-width:900px;border:1px solid var(--line);border-radius:12px;margin-top:8px}.scorebox{font-size:16px;font-weight:800;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px;margin-top:8px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.filters button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 10px}.hidden{display:none!important}@media(max-width:640px){.choices{grid-template-columns:repeat(2,1fr)}.container{padding:10px}.qtext{font-size:14px}header{position:static}}
+</style></head><body>
+<header><h1>令和7年度 地質調査技士 現場調査部門 学習アプリ</h1><div class="bar"><span class="pill" id="jsstatus">JavaScript：未読み込み</span><span class="pill" id="progress">回答済み 0 / 102</span><button class="btn" onclick="grade()">採点する</button><button class="btn secondary" onclick="window.print()">印刷</button><button class="btn danger" onclick="clearAll()">リセット</button></div><div id="score" class="scorebox"></div><div class="filters"><button onclick="showFilter('all')">全問</button><button onclick="showFilter('required')">必須 1〜58</button><button onclick="showFilter('A')">A群 59〜80</button><button onclick="showFilter('B')">B群 81〜102</button></div></header>
+<main class="container"><div class="notice">問題文はPDFから抽出したテキストです。図表・イラストが必要な問題は、各問の「PDF紙面を表示」を開いて確認してください。採点は現場調査部門の問1〜102すべてを対象にします。</div>
+
+<section class="question" id="q1" data-q="1" data-group="required">
+  <div class="qhead"><div class="qtitle">問1</div><div class="tag required">必須</div></div>
+  <div class="qtext">1. 次は，地質調査技士資格について述べたものである。不適切なもの一つを選び記号（(1)～(4)）
+で示せ。 
+(1) 国土交通省の「公共工事に関する調査及び設計等の品質確保に資する技術者資格登録簿」
+には，「現場技術・管理部門」のみが登録されている。  
+(2) 総合評価落札方式において組合せ加点の対象とされている。 
+(3) 「現場調査部門」および「現場技術・管理部門」は，地質調査業者登録規程の現場管理者
+の資格として認められている。 
+(4) 業務によって国土交通省の地質・土質調査業務共通仕様書における主任技術者の資格とし
+て認められる場合がある。</div>
+  <div class="choices" role="radiogroup" aria-label="問1の解答">
+    <label><input type="radio" name="q1" value="1">(1)</label>
+    <label><input type="radio" name="q1" value="2">(2)</label>
+    <label><input type="radio" name="q1" value="3">(3)</label>
+    <label><input type="radio" name="q1" value="4">(4)</label>
+  </div>
+  <div class="result" id="r1"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（2ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_02.jpg" alt="問題PDF 2ページ">
+  </details>
+</section>
+<section class="question" id="q2" data-q="2" data-group="required">
+  <div class="qhead"><div class="qtitle">問2</div><div class="tag required">必須</div></div>
+  <div class="qtext">2. 次は，技術者の継続教育（ＣＰＤ）について述べたものである。不適切なもの一つを選び記号
+（(1)～(4)）で示せ。 
+(1) 国土交通省では，総合評価落札方式における技術者加算点に活用している。 
+(2) 地質調査技士では，登録更新に活用している。 
+(3) 国土交通省では，入札要件や技術者の評価に活用している。 
+(4) 国土交通省では，地質調査業者の登録要件に活用している。</div>
+  <div class="choices" role="radiogroup" aria-label="問2の解答">
+    <label><input type="radio" name="q2" value="1">(1)</label>
+    <label><input type="radio" name="q2" value="2">(2)</label>
+    <label><input type="radio" name="q2" value="3">(3)</label>
+    <label><input type="radio" name="q2" value="4">(4)</label>
+  </div>
+  <div class="result" id="r2"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（2ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_02.jpg" alt="問題PDF 2ページ">
+  </details>
+</section>
+<section class="question" id="q3" data-q="3" data-group="required">
+  <div class="qhead"><div class="qtitle">問3</div><div class="tag required">必須</div></div>
+  <div class="qtext">3. 次は，一般社団法人全国地質調査業協会連合の「倫理綱領」について述べたものである。不適
+切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 顧客のニーズと調査の目的をよく理解し，顧客に有利な判断を行うように努める。 
+(2) 自然に深く係わる立場を自覚し，環境との調和を考え，その保全に努める。 
+(3) 自らの技術や行動に関しては，自己責任原則の徹底を図る。 
+(4) 顧客の利益を守るため，業務の遂行中に知り得た秘匿事項を積極的に保護する。 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+- 2 -</div>
+  <div class="choices" role="radiogroup" aria-label="問3の解答">
+    <label><input type="radio" name="q3" value="1">(1)</label>
+    <label><input type="radio" name="q3" value="2">(2)</label>
+    <label><input type="radio" name="q3" value="3">(3)</label>
+    <label><input type="radio" name="q3" value="4">(4)</label>
+  </div>
+  <div class="result" id="r3"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（2ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_02.jpg" alt="問題PDF 2ページ">
+  </details>
+</section>
+<section class="question" id="q4" data-q="4" data-group="required">
+  <div class="qhead"><div class="qtitle">問4</div><div class="tag required">必須</div></div>
+  <div class="qtext">4．次は，第三次･担い手３法について述べたものである。不適切なもの一つを選び記号（(1)～(4)）
+で示せ。 
+(1) この改正は品確法と建設業法・入契法を一体的に見直し，発注者側の効率化を図るもので
+ある。 
+(2) 目的は，担い手確保と地域における対応力の強化，生産性向上である。 
+(3) 働き方改革の推進として，発注者は，受注者や下請負人が時間外労働規制を遵守できる工
+期設定に協力し，規則違反を助長しないよう十分留意することが盛り込まれた。 
+(4) 工期変更や契約金変更の協議の円滑化のため，受注者は資材の入手困難，高騰等の「おそれ
+情報」を発注者に通知する義務があり，公共発注者は協議に応ずる義務がある。</div>
+  <div class="choices" role="radiogroup" aria-label="問4の解答">
+    <label><input type="radio" name="q4" value="1">(1)</label>
+    <label><input type="radio" name="q4" value="2">(2)</label>
+    <label><input type="radio" name="q4" value="3">(3)</label>
+    <label><input type="radio" name="q4" value="4">(4)</label>
+  </div>
+  <div class="result" id="r4"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（3ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_03.jpg" alt="問題PDF 3ページ">
+  </details>
+</section>
+<section class="question" id="q5" data-q="5" data-group="required">
+  <div class="qhead"><div class="qtitle">問5</div><div class="tag required">必須</div></div>
+  <div class="qtext">5．次は，土壌汚染対策法に基づく土壌汚染状況調査等について述べたものである。不適切なもの
+一つを選び記号（(1)～(4)）で示せ。 
+(1) 自然由来の土壌汚染に対しては，通常の土壌汚染状況調査と同じ方法で調査を行う。 
+(2) 指定調査機関は，技術管理者を選任しなければならない。 
+(3) 土壌汚染対策法に基づく法定調査は，指定調査機関が実施しなければならない。 
+(4) 地歴調査は，調査対象地の土壌汚染のおそれを把握するために行われる。</div>
+  <div class="choices" role="radiogroup" aria-label="問5の解答">
+    <label><input type="radio" name="q5" value="1">(1)</label>
+    <label><input type="radio" name="q5" value="2">(2)</label>
+    <label><input type="radio" name="q5" value="3">(3)</label>
+    <label><input type="radio" name="q5" value="4">(4)</label>
+  </div>
+  <div class="result" id="r5"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（3ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_03.jpg" alt="問題PDF 3ページ">
+  </details>
+</section>
+<section class="question" id="q6" data-q="6" data-group="required">
+  <div class="qhead"><div class="qtitle">問6</div><div class="tag required">必須</div></div>
+  <div class="qtext">6．次は，総務省の日本標準産業分類における地質調査業の分類について述べたものである。適切
+なもの一つを選び記号（(1)～(4)）で示せ。 
+(1)「建設業」に分類されている。 
+(2)「学術研究，専門・技術サービス業」に分類されている。 
+(3)「専門サービス業」に分類されている。 
+(4)「一般土木建築工事業」に分類されている。 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+- 3 -</div>
+  <div class="choices" role="radiogroup" aria-label="問6の解答">
+    <label><input type="radio" name="q6" value="1">(1)</label>
+    <label><input type="radio" name="q6" value="2">(2)</label>
+    <label><input type="radio" name="q6" value="3">(3)</label>
+    <label><input type="radio" name="q6" value="4">(4)</label>
+  </div>
+  <div class="result" id="r6"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（3ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_03.jpg" alt="問題PDF 3ページ">
+  </details>
+</section>
+<section class="question" id="q7" data-q="7" data-group="required">
+  <div class="qhead"><div class="qtitle">問7</div><div class="tag required">必須</div></div>
+  <div class="qtext">7．下図は，地質構造を示す概念図とその名称を示したものである。不適切な組合せ一つを選び記
+号（(1)～(4)）で示せ。 
+ 
+  (1) 同斜構造     (2) 背斜構造     (3) 正断層     (4) 右横ずれ断層</div>
+  <div class="choices" role="radiogroup" aria-label="問7の解答">
+    <label><input type="radio" name="q7" value="1">(1)</label>
+    <label><input type="radio" name="q7" value="2">(2)</label>
+    <label><input type="radio" name="q7" value="3">(3)</label>
+    <label><input type="radio" name="q7" value="4">(4)</label>
+  </div>
+  <div class="result" id="r7"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（4ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_04.jpg" alt="問題PDF 4ページ">
+  </details>
+</section>
+<section class="question" id="q8" data-q="8" data-group="required">
+  <div class="qhead"><div class="qtitle">問8</div><div class="tag required">必須</div></div>
+  <div class="qtext">8．次は，火山岩について述べたものである。不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 火成岩の一種である。 
+(2) 等粒状組織を示す。 
+(3) 代表的な岩石には，流紋岩，安山岩，玄武岩がある。 
+(4) マグマが地表あるいは地下浅所で急冷することによって生成した岩石である。</div>
+  <div class="choices" role="radiogroup" aria-label="問8の解答">
+    <label><input type="radio" name="q8" value="1">(1)</label>
+    <label><input type="radio" name="q8" value="2">(2)</label>
+    <label><input type="radio" name="q8" value="3">(3)</label>
+    <label><input type="radio" name="q8" value="4">(4)</label>
+  </div>
+  <div class="result" id="r8"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（4ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_04.jpg" alt="問題PDF 4ページ">
+  </details>
+</section>
+<section class="question" id="q9" data-q="9" data-group="required">
+  <div class="qhead"><div class="qtitle">問9</div><div class="tag required">必須</div></div>
+  <div class="qtext">9．次は，特殊土について述べたものである。不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) しらすは火砕流堆積物の非溶結部であり，粘着力がほとんどない。 
+(2) ロームは降下火山灰の風成層であり，乱すと強度低下が著しい。 
+(3) 泥炭は深海性の堆積物であり，強度が極めて小さく少しの荷重で沈下する。 
+(4) まさ土は花崗岩の風化した残積土や崩積土であり，洗掘による土石流が発生しやすい。</div>
+  <div class="choices" role="radiogroup" aria-label="問9の解答">
+    <label><input type="radio" name="q9" value="1">(1)</label>
+    <label><input type="radio" name="q9" value="2">(2)</label>
+    <label><input type="radio" name="q9" value="3">(3)</label>
+    <label><input type="radio" name="q9" value="4">(4)</label>
+  </div>
+  <div class="result" id="r9"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（4ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_04.jpg" alt="問題PDF 4ページ">
+  </details>
+</section>
+<section class="question" id="q10" data-q="10" data-group="required">
+  <div class="qhead"><div class="qtitle">問10</div><div class="tag required">必須</div></div>
+  <div class="qtext">10．次は，ボーリング地点の経度および緯度の読み取りについて述べたものである。不適切なもの
+一つを選び記号（(1)～(4)）で示せ。 
+(1) 3mm までの精度で行った平面測量結果では，秒の精度は約1/10,000 秒までである。 
+(2) 実際の距離1km は，1/25,000 地形図上では，4cm である。 
+(3) 関東付近における緯度1 秒は約31ｍ，経度1 秒は約25ｍである。 
+(4) 1/2,500 地形図を用いて1mm 単位で読み取った場合，秒の精度は約1/100 秒までである。 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+- 4 -</div>
+  <div class="choices" role="radiogroup" aria-label="問10の解答">
+    <label><input type="radio" name="q10" value="1">(1)</label>
+    <label><input type="radio" name="q10" value="2">(2)</label>
+    <label><input type="radio" name="q10" value="3">(3)</label>
+    <label><input type="radio" name="q10" value="4">(4)</label>
+  </div>
+  <div class="result" id="r10"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（4ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_04.jpg" alt="問題PDF 4ページ">
+  </details>
+</section>
+<section class="question" id="q11" data-q="11" data-group="required">
+  <div class="qhead"><div class="qtitle">問11</div><div class="tag required">必須</div></div>
+  <div class="qtext">11．次は，コンクリートの劣化について示したものである。不適切な組合せ一つを選び記号（(1)
+～(4)）で示せ。</div>
+  <div class="choices" role="radiogroup" aria-label="問11の解答">
+    <label><input type="radio" name="q11" value="1">(1)</label>
+    <label><input type="radio" name="q11" value="2">(2)</label>
+    <label><input type="radio" name="q11" value="3">(3)</label>
+    <label><input type="radio" name="q11" value="4">(4)</label>
+  </div>
+  <div class="result" id="r11"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（5ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_05.jpg" alt="問題PDF 5ページ">
+  </details>
+</section>
+<section class="question" id="q12" data-q="12" data-group="required">
+  <div class="qhead"><div class="qtitle">問12</div><div class="tag required">必須</div></div>
+  <div class="qtext">12．次は，トンネルの工法について述べたものである。不適切なもの一つを選び記号（(1)～(4)）
+で示せ。 
+(1) ＮＡＴＭ工法は，山岳トンネルの工法であり未固結地盤では適用できない。 
+(2) シールド工法は，地上への影響が少なく都市部での施工に適している。 
+(3) 開削工法は，大規模な空間の構築が可能で，地下駅などの広い空間が作れる。 
+(4) 沈埋工法は，地上で製作した函（はこ）を海底（水中）に沈めながらトンネルを構築する工法である。</div>
+  <div class="choices" role="radiogroup" aria-label="問12の解答">
+    <label><input type="radio" name="q12" value="1">(1)</label>
+    <label><input type="radio" name="q12" value="2">(2)</label>
+    <label><input type="radio" name="q12" value="3">(3)</label>
+    <label><input type="radio" name="q12" value="4">(4)</label>
+  </div>
+  <div class="result" id="r12"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（5ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_05.jpg" alt="問題PDF 5ページ">
+  </details>
+</section>
+<section class="question" id="q13" data-q="13" data-group="required">
+  <div class="qhead"><div class="qtitle">問13</div><div class="tag required">必須</div></div>
+  <div class="qtext">13. 次は，液状化が発生する可能性が高い地形を示したものである。不適切なもの一つを選び記号
+（(1)～(4)）で示せ。 
+(1) 旧河道 
+(2) 丘陵地 
+(3) 三角州 
+(4) 干拓地</div>
+  <div class="choices" role="radiogroup" aria-label="問13の解答">
+    <label><input type="radio" name="q13" value="1">(1)</label>
+    <label><input type="radio" name="q13" value="2">(2)</label>
+    <label><input type="radio" name="q13" value="3">(3)</label>
+    <label><input type="radio" name="q13" value="4">(4)</label>
+  </div>
+  <div class="result" id="r13"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（5ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_05.jpg" alt="問題PDF 5ページ">
+  </details>
+</section>
+<section class="question" id="q14" data-q="14" data-group="required">
+  <div class="qhead"><div class="qtitle">問14</div><div class="tag required">必須</div></div>
+  <div class="qtext">14. 次は，地すべりの素因を示したものである。不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 片理面 
+(2) 新第三紀層 
+(3) 斜面の切土 
+(4) 断層・破砕帯 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+記号 
+項目 
+原因 
+発生する劣化現象 
+(1) 
+塩 害 
+塩化物イオンの混入や外部からの浸透 
+鋼材の腐食，ひび割れ 
+(2) 
+中性化 
+二酸化炭素の浸入によるアルカリ性の低下 
+鋼材の腐食，ひび割れ 
+(3) 
+アルカリ骨材反応 
+骨材に含まれる特定鉱物がアルカリと反応 
+異常膨張，ひび割れ 
+(4) 
+コールドジョイント コンクリート内部の水分の凍結 
+ひび割れ，剥離，剥落 
+
+- 5 -</div>
+  <div class="choices" role="radiogroup" aria-label="問14の解答">
+    <label><input type="radio" name="q14" value="1">(1)</label>
+    <label><input type="radio" name="q14" value="2">(2)</label>
+    <label><input type="radio" name="q14" value="3">(3)</label>
+    <label><input type="radio" name="q14" value="4">(4)</label>
+  </div>
+  <div class="result" id="r14"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（5ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_05.jpg" alt="問題PDF 5ページ">
+  </details>
+</section>
+<section class="question" id="q15" data-q="15" data-group="required">
+  <div class="qhead"><div class="qtitle">問15</div><div class="tag required">必須</div></div>
+  <div class="qtext">15．下表は，油圧フィード式スピンドル型ボーリングマシンの操作レバーの説明を示したものであ
+る。表中の空欄  Ａ  ～  Ｄ  に当てはまる語句の適切な組合せ一つを選び記号（(1)～(4)）
+で示せ。 
+ 
+操作レバー名称 
+操作内容 
+メインクラッチレバー 
+原動機からの   Ａ   の伝達，遮断を行う 
+   Ｂ   レバー 
+スピンドル回転数とドラム巻揚速度の調整を行う 
+ホイスチングレバー， 
+ブレーキレバー 
+ドラムによるドリルストリングスなどの   Ｃ   に使用
+し，ホイスト，ブレーキ制動を行う 
+   Ｄ   切換レバー 
+スピンドルの前進，後退，中立の切換を行う 
+ 
+記号 
+Ａ 
+Ｂ 
+Ｃ 
+Ｄ 
+(1)  
+(2)  
+(3)  
+(4)  
+回転動力 
+電
+気 
+電
+気 
+給進力 
+チェンジ 
+スピンドル 
+ド
+ラ
+ム 
+スピンドル 
+揚降管作業 
+掘削作業 
+揚降管作業 
+掘削作業 
+フィード 
+フィード 
+スピンドル 
+ブレーキ</div>
+  <div class="choices" role="radiogroup" aria-label="問15の解答">
+    <label><input type="radio" name="q15" value="1">(1)</label>
+    <label><input type="radio" name="q15" value="2">(2)</label>
+    <label><input type="radio" name="q15" value="3">(3)</label>
+    <label><input type="radio" name="q15" value="4">(4)</label>
+  </div>
+  <div class="result" id="r15"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（6ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_06.jpg" alt="問題PDF 6ページ">
+  </details>
+</section>
+<section class="question" id="q16" data-q="16" data-group="required">
+  <div class="qhead"><div class="qtitle">問16</div><div class="tag required">必須</div></div>
+  <div class="qtext">16．次は，油圧フィード式スピンドル型ボーリングマシンについて述べたものである。不適切なも
+の一つを選び記号（(1)～(4)）で示せ。 
+(1) スピンドルの回転数と回転トルクは反比例の関係にあり，回転数が２倍になると回転トル
+クは1／2 倍になる。 
+(2) ロッドへの回転力・給進力・引上げ力は，手動チャックまたは油圧チャックによって伝達
+される。 
+(3) スピンドルの給進力の方が引上げ力より大きい。 
+(4) スピンドルの回転と巻揚装置は機械式で駆動される。</div>
+  <div class="choices" role="radiogroup" aria-label="問16の解答">
+    <label><input type="radio" name="q16" value="1">(1)</label>
+    <label><input type="radio" name="q16" value="2">(2)</label>
+    <label><input type="radio" name="q16" value="3">(3)</label>
+    <label><input type="radio" name="q16" value="4">(4)</label>
+  </div>
+  <div class="result" id="r16"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（6ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_06.jpg" alt="問題PDF 6ページ">
+  </details>
+</section>
+<section class="question" id="q17" data-q="17" data-group="required">
+  <div class="qhead"><div class="qtitle">問17</div><div class="tag required">必須</div></div>
+  <div class="qtext">17．次は，ボーリングポンプ各部の構造と機能について述べたものである。不適切なもの一つを選
+び記号（(1)～(4)）で示せ。 
+(1) エアーチャンバーは，吐出流体の圧力を増加させるものである。 
+(2) サクションホース・フートバルブは，掘削泥水をポンプに吸入させるものである。 
+(3) 安全弁は，ポンプ・配管の破損を防止するためのものである。 
+(4) Ｖベルト・プーリーは，電動機やエンジンの回転動力を伝達するものである。 
+ 
+ 
+ 
+
+- 6 -</div>
+  <div class="choices" role="radiogroup" aria-label="問17の解答">
+    <label><input type="radio" name="q17" value="1">(1)</label>
+    <label><input type="radio" name="q17" value="2">(2)</label>
+    <label><input type="radio" name="q17" value="3">(3)</label>
+    <label><input type="radio" name="q17" value="4">(4)</label>
+  </div>
+  <div class="result" id="r17"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（6ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_06.jpg" alt="問題PDF 6ページ">
+  </details>
+</section>
+<section class="question" id="q18" data-q="18" data-group="required">
+  <div class="qhead"><div class="qtitle">問18</div><div class="tag required">必須</div></div>
+  <div class="qtext">18．次は，ボーリングポンプを取り扱う際の注意事項について述べたものである。不適切なもの一
+つを選び記号（(1)～(4)）で示せ。 
+(1) クランクケースの回転部には, 泥水が入らないよう十分注意する。 
+(2) 冬季には, ポンプ・ホース・配管などの凍結に注意し，作業終了時に完全に水抜きを行う。 
+(3) 異物を吸込むとバルブの動作不良の原因となるため，吸入口には金網などを用いる。 
+(4) 泥水の吸込み高さが高いほど効率が良くなるので，ポンプ本体と吸入口の高低差はなるべ
+く大きくする。</div>
+  <div class="choices" role="radiogroup" aria-label="問18の解答">
+    <label><input type="radio" name="q18" value="1">(1)</label>
+    <label><input type="radio" name="q18" value="2">(2)</label>
+    <label><input type="radio" name="q18" value="3">(3)</label>
+    <label><input type="radio" name="q18" value="4">(4)</label>
+  </div>
+  <div class="result" id="r18"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（7ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_07.jpg" alt="問題PDF 7ページ">
+  </details>
+</section>
+<section class="question" id="q19" data-q="19" data-group="required">
+  <div class="qhead"><div class="qtitle">問19</div><div class="tag required">必須</div></div>
+  <div class="qtext">19．次は，給水設備の計画立案について述べたものである。不適切なもの一つを選び記号（(1)～
+(4)）で示せ。 
+(1) 水道など既存の給水設備からの給水が可能な場合もある。 
+(2) 河川・用水路・湖沼を水源として，水タンクでの運搬やポンプでの給水を行う場合もある。 
+(3) 河川・用水路・湖沼には多くの場合に水利権が設定されていないものの，取水する際は事
+前に了解を得る必要がある。 
+(4) 小規模な河川・用水路・湖沼では，季節的な水量の増減や枯渇にも留意する必要がある。</div>
+  <div class="choices" role="radiogroup" aria-label="問19の解答">
+    <label><input type="radio" name="q19" value="1">(1)</label>
+    <label><input type="radio" name="q19" value="2">(2)</label>
+    <label><input type="radio" name="q19" value="3">(3)</label>
+    <label><input type="radio" name="q19" value="4">(4)</label>
+  </div>
+  <div class="result" id="r19"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（7ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_07.jpg" alt="問題PDF 7ページ">
+  </details>
+</section>
+<section class="question" id="q20" data-q="20" data-group="required">
+  <div class="qhead"><div class="qtitle">問20</div><div class="tag required">必須</div></div>
+  <div class="qtext">20．次は，ボーリングの作業計画について述べたものである。不適切なもの一つを選び記号（(1)
+～(4)）で示せ。 
+(1) 作業目的を明らかにし，その目的にあった最適の方法を選択することが重要である。 
+(2) ボーリング地点の地形・土地利用・植生・用途などの状況に合わせ，安全対策にも考慮す
+る必要がある。 
+(3) 安全かつ効率的な作業のためには，気象・海象に関する条件を十分に調査することが重要
+である。 
+(4) 効率的な作業のためには，予定掘削深度ちょうどのロッドやケーシングを準備することが
+重要である。</div>
+  <div class="choices" role="radiogroup" aria-label="問20の解答">
+    <label><input type="radio" name="q20" value="1">(1)</label>
+    <label><input type="radio" name="q20" value="2">(2)</label>
+    <label><input type="radio" name="q20" value="3">(3)</label>
+    <label><input type="radio" name="q20" value="4">(4)</label>
+  </div>
+  <div class="result" id="r20"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（7ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_07.jpg" alt="問題PDF 7ページ">
+  </details>
+</section>
+<section class="question" id="q21" data-q="21" data-group="required">
+  <div class="qhead"><div class="qtitle">問21</div><div class="tag required">必須</div></div>
+  <div class="qtext">21．次は，運搬について述べたものである。不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 小運搬には，モノレールや索道，ヘリコプターでの運搬は含まれない。 
+(2) 大運搬とは，リストにより準備された資材を，倉庫から資材基地まで運搬し，その後の作
+業が効率良く行えるよう配置して荷卸しを行う作業をいう。 
+(3) 小運搬とは，ボーリング機材や原位置試験装置などを，資材基地から調査地点まで移動し
+ていく作業をいう。 
+(4) 現地踏査に基づいて効率的な運搬方法を選択することが重要である。 
+ 
+ 
+ 
+ 
+ 
+ 
+
+- 7 -</div>
+  <div class="choices" role="radiogroup" aria-label="問21の解答">
+    <label><input type="radio" name="q21" value="1">(1)</label>
+    <label><input type="radio" name="q21" value="2">(2)</label>
+    <label><input type="radio" name="q21" value="3">(3)</label>
+    <label><input type="radio" name="q21" value="4">(4)</label>
+  </div>
+  <div class="result" id="r21"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（7ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_07.jpg" alt="問題PDF 7ページ">
+  </details>
+</section>
+<section class="question" id="q22" data-q="22" data-group="required">
+  <div class="qhead"><div class="qtitle">問22</div><div class="tag required">必須</div></div>
+  <div class="qtext">22．次は，平坦地足場における板材足場と嵩（かさ）上げ足場ついて述べたものである。不適切な
+もの一つを選び記号（(1)～(4)）で示せ。 
+(1) どちらの足場も傾斜15°未満の平坦地を対象としている。 
+(2) サンプリングやオールコアボーリングなどスピンドルの下部に作業空間が必要な場合は，
+板材足場を適用する。 
+(3) 嵩上げ足場のほうが設置するための時間と労力がかかる。 
+(4) 現場条件や作業内容などを確認して，仕様書との相違がなければ，仕様書どおりの足場を
+設置する。 
+ 
+ 
+ 
+ 
+ 
+ 
+板材足場の例                嵩上げ足場の例</div>
+  <div class="choices" role="radiogroup" aria-label="問22の解答">
+    <label><input type="radio" name="q22" value="1">(1)</label>
+    <label><input type="radio" name="q22" value="2">(2)</label>
+    <label><input type="radio" name="q22" value="3">(3)</label>
+    <label><input type="radio" name="q22" value="4">(4)</label>
+  </div>
+  <div class="result" id="r22"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（8ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_08.jpg" alt="問題PDF 8ページ">
+  </details>
+</section>
+<section class="question" id="q23" data-q="23" data-group="required">
+  <div class="qhead"><div class="qtitle">問23</div><div class="tag required">必須</div></div>
+  <div class="qtext">23．次は，パイプ足場について述べたものである。不適切なもの一つを選び記号（(1)～(4)）で
+示せ。 
+(1) 使用するパイプの剛性は大きいものの，足場は急激に倒壊する場合がある。 
+(2) 足場が倒壊する原因には，主として筋交いの材質不良や数量不足がある。 
+(3) 山林・斜面などで建地の脚部を地面に打ち込んで滑動を防止する場合にも，ベース金具は
+必須である。 
+(4) クランプには，足場に使用することを制限している「足場禁止」と印字されたものがある。</div>
+  <div class="choices" role="radiogroup" aria-label="問23の解答">
+    <label><input type="radio" name="q23" value="1">(1)</label>
+    <label><input type="radio" name="q23" value="2">(2)</label>
+    <label><input type="radio" name="q23" value="3">(3)</label>
+    <label><input type="radio" name="q23" value="4">(4)</label>
+  </div>
+  <div class="result" id="r23"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（8ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_08.jpg" alt="問題PDF 8ページ">
+  </details>
+</section>
+<section class="question" id="q24" data-q="24" data-group="required">
+  <div class="qhead"><div class="qtitle">問24</div><div class="tag required">必須</div></div>
+  <div class="qtext">24．下図は，ビットの刃先（メタル）が地層に食い込み掘進される機構の模式図である。この図の
+説明のうち不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+ 
+(1) 食い込み深さh は荷重Ｗに比例する。 
+(2) 水平力Ｔは回転力のことを指す。 
+(3) 回転抵抗力Ｒは食い込み深さh に反比例する。 
+(4) トルクとは回転抵抗力Ｒのことを指す。 
+ 
+ 
+ 
+
+- 8 -</div>
+  <div class="choices" role="radiogroup" aria-label="問24の解答">
+    <label><input type="radio" name="q24" value="1">(1)</label>
+    <label><input type="radio" name="q24" value="2">(2)</label>
+    <label><input type="radio" name="q24" value="3">(3)</label>
+    <label><input type="radio" name="q24" value="4">(4)</label>
+  </div>
+  <div class="result" id="r24"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（8ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_08.jpg" alt="問題PDF 8ページ">
+  </details>
+</section>
+<section class="question" id="q25" data-q="25" data-group="required">
+  <div class="qhead"><div class="qtitle">問25</div><div class="tag required">必須</div></div>
+  <div class="qtext">25．次は，掘進時の荷重について述べたものである。不適切なもの一つを選び記号（(1)～(4)）で
+示せ。 
+(1) 過剰な荷重をかけると，ロッドの摩耗や孔壁損傷などが生じやすくなる。 
+(2) 適正な荷重であれば，荷重と掘進速度は比例する。 
+(3) ビット荷重の大部分はボーリングマシンによる給圧で，ロッドの自重は無視できる。 
+(4) 過剰な荷重をかけると，ロッドが湾曲し孔曲がりが発生することがある。</div>
+  <div class="choices" role="radiogroup" aria-label="問25の解答">
+    <label><input type="radio" name="q25" value="1">(1)</label>
+    <label><input type="radio" name="q25" value="2">(2)</label>
+    <label><input type="radio" name="q25" value="3">(3)</label>
+    <label><input type="radio" name="q25" value="4">(4)</label>
+  </div>
+  <div class="result" id="r25"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（9ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_09.jpg" alt="問題PDF 9ページ">
+  </details>
+</section>
+<section class="question" id="q26" data-q="26" data-group="required">
+  <div class="qhead"><div class="qtitle">問26</div><div class="tag required">必須</div></div>
+  <div class="qtext">26．次は，泥水管理について述べたものである。不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 泥水比重の測定は，マッドバランス（比重計）を使用するのが一般的である。 
+(2) 粘性の測定は，ファンネルビスコメーターを使用した500cc 法が一般的である。 
+(3) 泥水中の砂分が増加すると，ポンプやパイプ類の摩耗が大きくなる。 
+(4) pH の適正値は，泥材により大きく異なるため泥水管理項目ではない。</div>
+  <div class="choices" role="radiogroup" aria-label="問26の解答">
+    <label><input type="radio" name="q26" value="1">(1)</label>
+    <label><input type="radio" name="q26" value="2">(2)</label>
+    <label><input type="radio" name="q26" value="3">(3)</label>
+    <label><input type="radio" name="q26" value="4">(4)</label>
+  </div>
+  <div class="result" id="r26"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（9ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_09.jpg" alt="問題PDF 9ページ">
+  </details>
+</section>
+<section class="question" id="q27" data-q="27" data-group="required">
+  <div class="qhead"><div class="qtitle">問27</div><div class="tag required">必須</div></div>
+  <div class="qtext">27．次は，泥水の使用目的について述べたものである。不適切なもの一つを選び記号（(1)～(4)）
+で示せ。 
+(1) 泥水の循環停止に際し，カッティングスの沈降を促進させる。 
+(2) カッティングスの排除を効率化させる。 
+(3) ロッド回転抵抗を減少させる。 
+(4) 地層中からボーリング孔への水，油，ガスなどの湧出を防止する。</div>
+  <div class="choices" role="radiogroup" aria-label="問27の解答">
+    <label><input type="radio" name="q27" value="1">(1)</label>
+    <label><input type="radio" name="q27" value="2">(2)</label>
+    <label><input type="radio" name="q27" value="3">(3)</label>
+    <label><input type="radio" name="q27" value="4">(4)</label>
+  </div>
+  <div class="result" id="r27"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（9ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_09.jpg" alt="問題PDF 9ページ">
+  </details>
+</section>
+<section class="question" id="q28" data-q="28" data-group="required">
+  <div class="qhead"><div class="qtitle">問28</div><div class="tag required">必須</div></div>
+  <div class="qtext">28．次は，未固結層の掘進について述べたものである。不適切なもの一つを選び記号（(1)～(4)）
+で示せ。 
+(1)一般的にメタルビットを使用することが多い。 
+(2) 各種計測器具を挿入する場合は，真円性は問わない。 
+(3) 孔内の残留カッティングスをよく排除する。 
+(4) 孔壁保護に留意し，崩壊防止に努める。</div>
+  <div class="choices" role="radiogroup" aria-label="問28の解答">
+    <label><input type="radio" name="q28" value="1">(1)</label>
+    <label><input type="radio" name="q28" value="2">(2)</label>
+    <label><input type="radio" name="q28" value="3">(3)</label>
+    <label><input type="radio" name="q28" value="4">(4)</label>
+  </div>
+  <div class="result" id="r28"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（9ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_09.jpg" alt="問題PDF 9ページ">
+  </details>
+</section>
+<section class="question" id="q29" data-q="29" data-group="required">
+  <div class="qhead"><div class="qtitle">問29</div><div class="tag required">必須</div></div>
+  <div class="qtext">29．次は，孔内事故対策について述べたものである。不適切なもの一つを選び記号（(1)～(4)）で
+示せ。 
+(1) ロッドの切断事故の原因は，使い過ぎによる強度低下が最も多い。 
+(2) 膨潤性粘土鉱物を含んだ岩石の掘削時は，孔壁の押出しがあるため，一般的にケーシング
+は挿入しない。 
+(3) 通常工法の場合は，ロッド落下事故時にアウトサイドタップを使用することが多い。 
+(4) 抑留事故が発生した場合は，発生箇所や原因を詳細に把握する事が重要である。 
+ 
+ 
+ 
+ 
+
+- 9 -</div>
+  <div class="choices" role="radiogroup" aria-label="問29の解答">
+    <label><input type="radio" name="q29" value="1">(1)</label>
+    <label><input type="radio" name="q29" value="2">(2)</label>
+    <label><input type="radio" name="q29" value="3">(3)</label>
+    <label><input type="radio" name="q29" value="4">(4)</label>
+  </div>
+  <div class="result" id="r29"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（9ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_09.jpg" alt="問題PDF 9ページ">
+  </details>
+</section>
+<section class="question" id="q30" data-q="30" data-group="required">
+  <div class="qhead"><div class="qtitle">問30</div><div class="tag required">必須</div></div>
+  <div class="qtext">30．次は，抑留対策について述べたものである。不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 掘進中は常にポンプの圧力に留意するとともに，給圧およびトルクの増加などをすばやく
+察知し対応する。 
+(2) 孔底にカッティングスが多くなったと判断した場合は，孔内状況の改善を図る。 
+(3) ロッドの回転を止めておく場合は，循環水を送り保孔とカッティングスの沈殿を防ぐ。 
+(4) 掘進を一時的に停止する場合は，孔壁崩壊防止のためコアバレルを孔底まで降ろしておく。</div>
+  <div class="choices" role="radiogroup" aria-label="問30の解答">
+    <label><input type="radio" name="q30" value="1">(1)</label>
+    <label><input type="radio" name="q30" value="2">(2)</label>
+    <label><input type="radio" name="q30" value="3">(3)</label>
+    <label><input type="radio" name="q30" value="4">(4)</label>
+  </div>
+  <div class="result" id="r30"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（10ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_10.jpg" alt="問題PDF 10ページ">
+  </details>
+</section>
+<section class="question" id="q31" data-q="31" data-group="required">
+  <div class="qhead"><div class="qtitle">問31</div><div class="tag required">必須</div></div>
+  <div class="qtext">31．次は，ボーリング孔内への計器挿入や設置について述べたものである。不適切なもの一つを選
+び記号（(1)～(4)）で示せ。 
+(1) 計器を正確に設置するには，孔径・深度の精度や孔の平滑性保持が重要である。 
+(2) 孔壁の崩壊や曲がりがないよう，泥水の使用や保護ケーシングを適切に挿入する。 
+(3) 計器挿入・建て込み時の損傷を防止するため，段階的な設置手順を計画しておくことが重
+要である。 
+(4) 計器選定にあたっては測定範囲・精度などの条件を満たせば，耐久性・設置場所などを考
+慮する必要性はない。</div>
+  <div class="choices" role="radiogroup" aria-label="問31の解答">
+    <label><input type="radio" name="q31" value="1">(1)</label>
+    <label><input type="radio" name="q31" value="2">(2)</label>
+    <label><input type="radio" name="q31" value="3">(3)</label>
+    <label><input type="radio" name="q31" value="4">(4)</label>
+  </div>
+  <div class="result" id="r31"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（10ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_10.jpg" alt="問題PDF 10ページ">
+  </details>
+</section>
+<section class="question" id="q32" data-q="32" data-group="required">
+  <div class="qhead"><div class="qtitle">問32</div><div class="tag required">必須</div></div>
+  <div class="qtext">32．次は，ボーリング掘削に先立ち行う埋設物（上下水道・ガス・電力・通信など）の確認につい
+て述べたものである。不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 現場環境により埋設物情報を事前に取得しておくことが重要である。 
+(2) 平面的な試掘確認範囲は，ボーリング削孔の最大孔径の範囲を確認すれば近接した埋設物
+があっても問題ない。 
+(3) 狭い場所や埋設物が密な場所では，バックホウなどの作業効率の良い重機による試掘を避
+け，手掘り作業を基本とする。 
+(4) 事前情報にない不明配管などが確認された場合は，その深度や大きさをスケッチや写真な
+どで記録し，発注者および管理者へ報告する。</div>
+  <div class="choices" role="radiogroup" aria-label="問32の解答">
+    <label><input type="radio" name="q32" value="1">(1)</label>
+    <label><input type="radio" name="q32" value="2">(2)</label>
+    <label><input type="radio" name="q32" value="3">(3)</label>
+    <label><input type="radio" name="q32" value="4">(4)</label>
+  </div>
+  <div class="result" id="r32"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（10ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_10.jpg" alt="問題PDF 10ページ">
+  </details>
+</section>
+<section class="question" id="q33" data-q="33" data-group="required">
+  <div class="qhead"><div class="qtitle">問33</div><div class="tag required">必須</div></div>
+  <div class="qtext">33．次は，土壌汚染調査のボーリング作業について述べたものである。適切なもの一つを選び記号
+（(1)～(4)）で示せ。 
+(1) 汚染のコンタミネーションを防止するため，サンプラー挿入毎に孔内を洗浄する。 
+(2) 回転掘削を行う場合は，コア試料に熱変化が生じないように泥水を用いる。 
+(3) 化学分析を主目的とする場合もコア試料を観察し，ボーリング柱状図を作成する。 
+(4) 化学分析用の地下水採取は，孔内水を乱さないように行う。 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+- 10 -</div>
+  <div class="choices" role="radiogroup" aria-label="問33の解答">
+    <label><input type="radio" name="q33" value="1">(1)</label>
+    <label><input type="radio" name="q33" value="2">(2)</label>
+    <label><input type="radio" name="q33" value="3">(3)</label>
+    <label><input type="radio" name="q33" value="4">(4)</label>
+  </div>
+  <div class="result" id="r33"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（10ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_10.jpg" alt="問題PDF 10ページ">
+  </details>
+</section>
+<section class="question" id="q34" data-q="34" data-group="required">
+  <div class="qhead"><div class="qtitle">問34</div><div class="tag required">必須</div></div>
+  <div class="qtext">34．次は，ロータリー式三重管サンプラーによる土試料の採取方法（JGS 1223-2012）について述
+べたものである。不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) アウターチューブとインナーチューブとは，個別に連結されている。 
+(2) メタルクラウン下端からのシューの突出長さは，地盤に応じて調整可能である。 
+(3) ライナーは，内面が粗めで十分な強度を有する円筒管とする。 
+(4) インナーチューブとライナーは，密着していなくてはならない。</div>
+  <div class="choices" role="radiogroup" aria-label="問34の解答">
+    <label><input type="radio" name="q34" value="1">(1)</label>
+    <label><input type="radio" name="q34" value="2">(2)</label>
+    <label><input type="radio" name="q34" value="3">(3)</label>
+    <label><input type="radio" name="q34" value="4">(4)</label>
+  </div>
+  <div class="result" id="r34"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（11ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_11.jpg" alt="問題PDF 11ページ">
+  </details>
+</section>
+<section class="question" id="q35" data-q="35" data-group="required">
+  <div class="qhead"><div class="qtitle">問35</div><div class="tag required">必須</div></div>
+  <div class="qtext">35．次は，標準貫入試験（JIS A 1219：2023）結果のＮ値（回/mm）の記載例を示したものである。
+不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 0/550（ロッド自沈） 
+(2) 0/330（ハンマー自沈） 
+(3) 2/300 
+(4) 50/80（貫入不能）</div>
+  <div class="choices" role="radiogroup" aria-label="問35の解答">
+    <label><input type="radio" name="q35" value="1">(1)</label>
+    <label><input type="radio" name="q35" value="2">(2)</label>
+    <label><input type="radio" name="q35" value="3">(3)</label>
+    <label><input type="radio" name="q35" value="4">(4)</label>
+  </div>
+  <div class="result" id="r35"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（11ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_11.jpg" alt="問題PDF 11ページ">
+  </details>
+</section>
+<section class="question" id="q36" data-q="36" data-group="required">
+  <div class="qhead"><div class="qtitle">問36</div><div class="tag required">必須</div></div>
+  <div class="qtext">36. 次は，孔内水位回復法による岩盤の透水試験方法（JGS 1321-2012）について述べたものであ
+る。不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 試験孔の掘削は清水掘りが望ましいが，安定液を使った場合は入念な洗浄を行う。 
+(2) 孔内水位を測定し，トリップバルブの位置を決める。 
+(3) パッカーおよびトリップバルブを先端部に取り付けた水位測定管を接続しながら所定の深
+さまで挿入し，加圧装置によりパッカーを膨らませて孔壁に密着させる。 
+(4) パッカーを膨らませた後は，試験区間の水圧が変化しないように速やかにトリップバルブ
+を開放する。</div>
+  <div class="choices" role="radiogroup" aria-label="問36の解答">
+    <label><input type="radio" name="q36" value="1">(1)</label>
+    <label><input type="radio" name="q36" value="2">(2)</label>
+    <label><input type="radio" name="q36" value="3">(3)</label>
+    <label><input type="radio" name="q36" value="4">(4)</label>
+  </div>
+  <div class="result" id="r36"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（11ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_11.jpg" alt="問題PDF 11ページ">
+  </details>
+</section>
+<section class="question" id="q37" data-q="37" data-group="required">
+  <div class="qhead"><div class="qtitle">問37</div><div class="tag required">必須</div></div>
+  <div class="qtext">37．次は，ボーリング孔内で行う物理検層について述べたものである。適切なものを一つ選び記号
+（(1)～(4)）で示せ。 
+(1) 電気検層は，地層の電気抵抗(比抵抗)を求めることで正確な地層の判定を目的とする。 
+(2) 速度検層は，地盤の硬さや亀裂などを定量的に評価することを目的とする。 
+(3) 密度検層は，地盤のアルファ線散乱強度から密度分布を測定する。 
+(4) 磁気探査は，海水や地下水中では安定したデータが得られない。 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+- 11 -</div>
+  <div class="choices" role="radiogroup" aria-label="問37の解答">
+    <label><input type="radio" name="q37" value="1">(1)</label>
+    <label><input type="radio" name="q37" value="2">(2)</label>
+    <label><input type="radio" name="q37" value="3">(3)</label>
+    <label><input type="radio" name="q37" value="4">(4)</label>
+  </div>
+  <div class="result" id="r37"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（11ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_11.jpg" alt="問題PDF 11ページ">
+  </details>
+</section>
+<section class="question" id="q38" data-q="38" data-group="required">
+  <div class="qhead"><div class="qtitle">問38</div><div class="tag required">必須</div></div>
+  <div class="qtext">38．下図は，地盤材料の粒径区分とその呼び名（構成粒子）を示したものである。図中 
+  Ａ  ～  Ｄ  に当てはまる数値の適切な組合せ一つを選び記号（(1)～(4)）で示せ。 
+ 
+記号 
+Ａ 
+Ｂ 
+Ｃ 
+Ｄ 
+(1) 
+(2) 
+(3) 
+(4) 
+シルト粒子 
+粘土粒子 
+粘土粒子 
+シルト粒子 
+粘土粒子 
+シルト粒子 
+シルト粒子 
+粘土粒子 
+2 
+5 
+2 
+5 
+50 
+75 
+75 
+50</div>
+  <div class="choices" role="radiogroup" aria-label="問38の解答">
+    <label><input type="radio" name="q38" value="1">(1)</label>
+    <label><input type="radio" name="q38" value="2">(2)</label>
+    <label><input type="radio" name="q38" value="3">(3)</label>
+    <label><input type="radio" name="q38" value="4">(4)</label>
+  </div>
+  <div class="result" id="r38"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（12ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_12.jpg" alt="問題PDF 12ページ">
+  </details>
+</section>
+<section class="question" id="q39" data-q="39" data-group="required">
+  <div class="qhead"><div class="qtitle">問39</div><div class="tag required">必須</div></div>
+  <div class="qtext">39．次は，現場における土質分類について述べたものである。適切なもの一つを選び記号（(1)～
+(4)）で示せ。 
+(1) 粘土とシルトの判別は，粘り気が強いものがシルトである。 
+(2) 砂れきは，砂よりもれきが多い。 
+(3) 砂まじりシルトは，砂質シルトよりも砂の含有量が多い。 
+(4) 土の色調の判断は，乾燥させた状態で観察する。</div>
+  <div class="choices" role="radiogroup" aria-label="問39の解答">
+    <label><input type="radio" name="q39" value="1">(1)</label>
+    <label><input type="radio" name="q39" value="2">(2)</label>
+    <label><input type="radio" name="q39" value="3">(3)</label>
+    <label><input type="radio" name="q39" value="4">(4)</label>
+  </div>
+  <div class="result" id="r39"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（12ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_12.jpg" alt="問題PDF 12ページ">
+  </details>
+</section>
+<section class="question" id="q40" data-q="40" data-group="required">
+  <div class="qhead"><div class="qtitle">問40</div><div class="tag required">必須</div></div>
+  <div class="qtext">40．次は，岩盤ボーリングのコア採取率，最大コア長，ＲＱＤについて述べたものである。不適切
+なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) コア採取率は１ｍ単位区間当たりで記載する。 
+(2) 最大コア長とＲＱＤは１ｍ区間での値を記載する。 
+(3) ＲＱＤは１ｍ単位区間当たりの10cm 以上の長さのボーリングコアの総延長の比で表示する。 
+(4) 最大コア長は，１削孔長当たりの最大コア長でもよい。</div>
+  <div class="choices" role="radiogroup" aria-label="問40の解答">
+    <label><input type="radio" name="q40" value="1">(1)</label>
+    <label><input type="radio" name="q40" value="2">(2)</label>
+    <label><input type="radio" name="q40" value="3">(3)</label>
+    <label><input type="radio" name="q40" value="4">(4)</label>
+  </div>
+  <div class="result" id="r40"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（12ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_12.jpg" alt="問題PDF 12ページ">
+  </details>
+</section>
+<section class="question" id="q41" data-q="41" data-group="required">
+  <div class="qhead"><div class="qtitle">問41</div><div class="tag required">必須</div></div>
+  <div class="qtext">41．次は，岩盤ボーリングの総削孔長，削孔角度，削孔方位，地盤勾配について述べたものである。
+不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 総削孔長は，削孔したボーリングの全長を1／100ｍ 単位まで記入する。 
+(2) 削孔角度は，鉛直下方を180 度，鉛直上方を０度とする。 
+(3) 削孔方位は，斜めボーリングの場合は削孔方向の水平成分について記入する。 
+(4) 地盤勾配は，孔口を中心に斜面上下でそれぞれ５ｍ程度の範囲の平均勾配を記入する。 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+- 12 -</div>
+  <div class="choices" role="radiogroup" aria-label="問41の解答">
+    <label><input type="radio" name="q41" value="1">(1)</label>
+    <label><input type="radio" name="q41" value="2">(2)</label>
+    <label><input type="radio" name="q41" value="3">(3)</label>
+    <label><input type="radio" name="q41" value="4">(4)</label>
+  </div>
+  <div class="result" id="r41"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（12ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_12.jpg" alt="問題PDF 12ページ">
+  </details>
+</section>
+<section class="question" id="q42" data-q="42" data-group="required">
+  <div class="qhead"><div class="qtitle">問42</div><div class="tag required">必須</div></div>
+  <div class="qtext">42. 次は，ボーリング柱状図の標題欄の記入要領について述べたものである。不適切なもの一つを
+選び記号（（1)～(4））で示せ。 
+なお，記入要領は，一般社団法人全国地質調査業協会連合会「ボーリング柱状図作成及びボー
+リングコア取扱い・保管要領（案）・同解説」(平成27 年６月)に準じるものとする。 
+(1) 総削孔長は，削孔したボーリングの全長を1／100ｍ単位まで記入する。 
+(2) 緯度および経度は，ボーリング調査を行う敷地の中心位置を記入する。 
+(3) 調査位置は，ボーリング孔口位置の地名を番地まで記入する。 
+(4) 調査名は，設計図書に示されている正式な業務名称を省略せずに記入する。</div>
+  <div class="choices" role="radiogroup" aria-label="問42の解答">
+    <label><input type="radio" name="q42" value="1">(1)</label>
+    <label><input type="radio" name="q42" value="2">(2)</label>
+    <label><input type="radio" name="q42" value="3">(3)</label>
+    <label><input type="radio" name="q42" value="4">(4)</label>
+  </div>
+  <div class="result" id="r42"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（13ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_13.jpg" alt="問題PDF 13ページ">
+  </details>
+</section>
+<section class="question" id="q43" data-q="43" data-group="required">
+  <div class="qhead"><div class="qtitle">問43</div><div class="tag required">必須</div></div>
+  <div class="qtext">43. 次は，標準貫入試験で採取した試料の記録について述べたものである。不適切なもの一つを選
+び記号（(1)～(4)）で示せ。 
+(1) 観察記録は，標準貫入試験１回毎に行う。 
+(2) カッティングスの有無と採取長を記録し，打ち込み深度と採取長が異なる場合は理由を記
+録する。 
+(3) れきは最大径，れき種，混入割合について記録する。 
+(4) コンクリート片やレンガ片などの人工物の混入については記録する必要はない。</div>
+  <div class="choices" role="radiogroup" aria-label="問43の解答">
+    <label><input type="radio" name="q43" value="1">(1)</label>
+    <label><input type="radio" name="q43" value="2">(2)</label>
+    <label><input type="radio" name="q43" value="3">(3)</label>
+    <label><input type="radio" name="q43" value="4">(4)</label>
+  </div>
+  <div class="result" id="r43"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（13ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_13.jpg" alt="問題PDF 13ページ">
+  </details>
+</section>
+<section class="question" id="q44" data-q="44" data-group="required">
+  <div class="qhead"><div class="qtitle">問44</div><div class="tag required">必須</div></div>
+  <div class="qtext">44. 次は，ボーリングコア写真の解像度に影響する要因を示したものである。不適切なもの一つを
+選び記号（(1)～(4)）で示せ。 
+(1) ＩＳＯ感度 
+(2) 撮像素子（イメージセンサー） 
+(3) ホワイトバランス 
+(4) レンズ</div>
+  <div class="choices" role="radiogroup" aria-label="問44の解答">
+    <label><input type="radio" name="q44" value="1">(1)</label>
+    <label><input type="radio" name="q44" value="2">(2)</label>
+    <label><input type="radio" name="q44" value="3">(3)</label>
+    <label><input type="radio" name="q44" value="4">(4)</label>
+  </div>
+  <div class="result" id="r44"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（13ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_13.jpg" alt="問題PDF 13ページ">
+  </details>
+</section>
+<section class="question" id="q45" data-q="45" data-group="required">
+  <div class="qhead"><div class="qtitle">問45</div><div class="tag required">必須</div></div>
+  <div class="qtext">45. 次は，国土交通省「地質・土質調査成果電子納品要領」における電子成果品のフォルダ構成に
+ついて述べたものである。不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 「BORING」フォルダ直下には，地質情報管理ファイルを格納する。 
+(2) 「LOG」サブフォルダには，電子簡略柱状図を格納する。 
+(3) 「PIC」サブフォルダには，ボーリングコア写真の電子成果品を格納する。 
+(4) 「TEST」サブフォルダには，土質試験および地盤調査の電子成果品を格納する。</div>
+  <div class="choices" role="radiogroup" aria-label="問45の解答">
+    <label><input type="radio" name="q45" value="1">(1)</label>
+    <label><input type="radio" name="q45" value="2">(2)</label>
+    <label><input type="radio" name="q45" value="3">(3)</label>
+    <label><input type="radio" name="q45" value="4">(4)</label>
+  </div>
+  <div class="result" id="r45"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（13ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_13.jpg" alt="問題PDF 13ページ">
+  </details>
+</section>
+<section class="question" id="q46" data-q="46" data-group="required">
+  <div class="qhead"><div class="qtitle">問46</div><div class="tag required">必須</div></div>
+  <div class="qtext">46. 次は，土壌汚染状況調査でボーリングにより試料採取を行う際の注意事項について述べたもの
+である。不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 掘進の際は，採取試料の二次汚染に留意し，機器の洗浄を確実に行う。 
+(2) 微量の汚染物質を分析することから，試料採取用具の都度洗浄や使い捨てにも気を配る必
+要がある。 
+(3) 採取試料の化学的変化を極力抑えるため，高回転で掘削することを基本とする。 
+(4) 有害物質の濃度変化が生じないように，掘削水を用いずに掘削する。 
+
+- 13 -</div>
+  <div class="choices" role="radiogroup" aria-label="問46の解答">
+    <label><input type="radio" name="q46" value="1">(1)</label>
+    <label><input type="radio" name="q46" value="2">(2)</label>
+    <label><input type="radio" name="q46" value="3">(3)</label>
+    <label><input type="radio" name="q46" value="4">(4)</label>
+  </div>
+  <div class="result" id="r46"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（13ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_13.jpg" alt="問題PDF 13ページ">
+  </details>
+</section>
+<section class="question" id="q47" data-q="47" data-group="required">
+  <div class="qhead"><div class="qtitle">問47</div><div class="tag required">必須</div></div>
+  <div class="qtext">47．次は，地すべりにおけるボーリング調査に関する留意点について述べたものである。不適切な
+もの一つを選び記号（(1)～(4)）で示せ。 
+(1) ボーリングはオールコア採取を原則とし，掘削孔径はボーリング孔を利用したすべり面調
+査や地下水調査を考慮し適切に定める。 
+(2) 調査箇所は，地すべりの運動方向に設定した主測線に沿って，地すべりブロック内の中央
+部にあたる１箇所で行うことを基本とする。 
+(3) 調査深度は，地すべり土塊内の岩塊を基盤と見誤る場合もあることから，基盤を確認する
+のに十分な深度とする。 
+(4) 地すべりブロックの層厚が推定不可能な場合は，原則として１本あたりの長さを地すべりブ
+ロック幅の 1／3 程度と仮定し，掘進結果を参考に長さを調整する。</div>
+  <div class="choices" role="radiogroup" aria-label="問47の解答">
+    <label><input type="radio" name="q47" value="1">(1)</label>
+    <label><input type="radio" name="q47" value="2">(2)</label>
+    <label><input type="radio" name="q47" value="3">(3)</label>
+    <label><input type="radio" name="q47" value="4">(4)</label>
+  </div>
+  <div class="result" id="r47"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（14ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_14.jpg" alt="問題PDF 14ページ">
+  </details>
+</section>
+<section class="question" id="q48" data-q="48" data-group="required">
+  <div class="qhead"><div class="qtitle">問48</div><div class="tag required">必須</div></div>
+  <div class="qtext">48．次は，地すべり調査においてすべり面を推定するための調査方法を示したものである。不適切
+なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 地盤伸縮計 
+(2) パイプひずみ計 
+(3) オールコアボーリング 
+(4) 孔内傾斜計</div>
+  <div class="choices" role="radiogroup" aria-label="問48の解答">
+    <label><input type="radio" name="q48" value="1">(1)</label>
+    <label><input type="radio" name="q48" value="2">(2)</label>
+    <label><input type="radio" name="q48" value="3">(3)</label>
+    <label><input type="radio" name="q48" value="4">(4)</label>
+  </div>
+  <div class="result" id="r48"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（14ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_14.jpg" alt="問題PDF 14ページ">
+  </details>
+</section>
+<section class="question" id="q49" data-q="49" data-group="required">
+  <div class="qhead"><div class="qtitle">問49</div><div class="tag required">必須</div></div>
+  <div class="qtext">49．下表は，河川堤防の維持管理における物理探査手法とその利用目的を示したものである。不適
+切な組合せ一つを選び記号（(1)～(4)）で示せ。 
+ 
+記号 
+物理探査手法 
+利用目的 
+(1) 
+表面波探査 
+築堤履歴 
+(2) 
+比抵抗法二次元探査 
+堤体の漏水 
+(3) 
+地中レーダ探査 
+護岸等の背面空洞 
+(4) 
+電磁探査 
+堤体の陥没</div>
+  <div class="choices" role="radiogroup" aria-label="問49の解答">
+    <label><input type="radio" name="q49" value="1">(1)</label>
+    <label><input type="radio" name="q49" value="2">(2)</label>
+    <label><input type="radio" name="q49" value="3">(3)</label>
+    <label><input type="radio" name="q49" value="4">(4)</label>
+  </div>
+  <div class="result" id="r49"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（14ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_14.jpg" alt="問題PDF 14ページ">
+  </details>
+</section>
+<section class="question" id="q50" data-q="50" data-group="required">
+  <div class="qhead"><div class="qtitle">問50</div><div class="tag required">必須</div></div>
+  <div class="qtext">50. 次は，地質調査報告書をまとめる際の留意事項について述べたものである。不適切なもの一つ
+を選び記号（(1)～(4)）で示せ。 
+(1) 広域的な考察とは，調査対象の構造物が立地する周辺の地層の構成と，その地質工学的特
+性についての記述である。 
+(2) 既存の調査資料の結果も考慮し，総合的な判断や解釈を明記する。 
+(3) 事実と解釈を明確に分けて記載し，解釈の部分についてはその根拠を明記する。 
+(4) きわめて少ないデータから結論を導き出したり，飛躍した理論や複数の実験式を組合せて
+結論を誘導する。 
+
+- 14 -</div>
+  <div class="choices" role="radiogroup" aria-label="問50の解答">
+    <label><input type="radio" name="q50" value="1">(1)</label>
+    <label><input type="radio" name="q50" value="2">(2)</label>
+    <label><input type="radio" name="q50" value="3">(3)</label>
+    <label><input type="radio" name="q50" value="4">(4)</label>
+  </div>
+  <div class="result" id="r50"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（14ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_14.jpg" alt="問題PDF 14ページ">
+  </details>
+</section>
+<section class="question" id="q51" data-q="51" data-group="required">
+  <div class="qhead"><div class="qtitle">問51</div><div class="tag required">必須</div></div>
+  <div class="qtext">51．次は，労働安全衛生法で指定されている技能講習の受講で従事可能な作業を示したものである。
+不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 特定粉じん作業 
+(2) 10kN 以上の玉掛け 
+(3) ガス溶接 
+(4) 10kN 以上の不整地運搬車運転</div>
+  <div class="choices" role="radiogroup" aria-label="問51の解答">
+    <label><input type="radio" name="q51" value="1">(1)</label>
+    <label><input type="radio" name="q51" value="2">(2)</label>
+    <label><input type="radio" name="q51" value="3">(3)</label>
+    <label><input type="radio" name="q51" value="4">(4)</label>
+  </div>
+  <div class="result" id="r51"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（15ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_15.jpg" alt="問題PDF 15ページ">
+  </details>
+</section>
+<section class="question" id="q52" data-q="52" data-group="required">
+  <div class="qhead"><div class="qtitle">問52</div><div class="tag required">必須</div></div>
+  <div class="qtext">52．次は，ボーリング回転掘削作業時の安全対策について述べたものである。不適切なもの一つを
+選び記号（(1)～(4)）で示せ。 
+(1) 回転部に接触して巻き取られる力は，数10kN になる場合がある。  
+(2) スピンドル・チャック・スイベルなどの回転部分は，カバーなど接触防止設備を設ける。 
+(3) チャック作業時は，メインクラッチレバーのストッパーを効かせて動力を遮断する。 
+(4) ウォータースイベルホースは，やぐらに固定させてはならない。</div>
+  <div class="choices" role="radiogroup" aria-label="問52の解答">
+    <label><input type="radio" name="q52" value="1">(1)</label>
+    <label><input type="radio" name="q52" value="2">(2)</label>
+    <label><input type="radio" name="q52" value="3">(3)</label>
+    <label><input type="radio" name="q52" value="4">(4)</label>
+  </div>
+  <div class="result" id="r52"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（15ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_15.jpg" alt="問題PDF 15ページ">
+  </details>
+</section>
+<section class="question" id="q53" data-q="53" data-group="required">
+  <div class="qhead"><div class="qtitle">問53</div><div class="tag required">必須</div></div>
+  <div class="qtext">53．次は，ボーリングロッドの昇降作業時の安全対策について述べたものである。適切なもの一つ
+を選び記号（(1)～(4)）で示せ。 
+(1) ワイヤロープは，巻胴に最低１巻以上残るように使用しなければならない。 
+(2) 玉掛け作業に用いる台付けワイヤロープの安全率は，４以上が必要である。 
+(3) ボーリング作業で用いるワイヤロープの安全率は，３以上が必要である。 
+(4) ロッドの着脱作業は，巻揚機に荷重を保持させたまま行う。</div>
+  <div class="choices" role="radiogroup" aria-label="問53の解答">
+    <label><input type="radio" name="q53" value="1">(1)</label>
+    <label><input type="radio" name="q53" value="2">(2)</label>
+    <label><input type="radio" name="q53" value="3">(3)</label>
+    <label><input type="radio" name="q53" value="4">(4)</label>
+  </div>
+  <div class="result" id="r53"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（15ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_15.jpg" alt="問題PDF 15ページ">
+  </details>
+</section>
+<section class="question" id="q54" data-q="54" data-group="required">
+  <div class="qhead"><div class="qtitle">問54</div><div class="tag required">必須</div></div>
+  <div class="qtext">54．次は，土壌汚染調査時の安全対策について述べたものである。不適切なもの一つを選び記号（(1)
+～(4)）で示せ。 
+(1) ボーリング試料には触れないため，有害物質に関する知識は不要である。 
+(2) 試料採取に用いたサンプラーは，引き揚げ毎に洗浄による除染作業を行う。 
+(3) 地下水採取時は，有害物質が目に入ることを防ぐため保護眼鏡を着用する。 
+(4) 有害物質を含む粉塵がある場所では，防塵マスクまたは防毒マスクを着用する。 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+- 15 -</div>
+  <div class="choices" role="radiogroup" aria-label="問54の解答">
+    <label><input type="radio" name="q54" value="1">(1)</label>
+    <label><input type="radio" name="q54" value="2">(2)</label>
+    <label><input type="radio" name="q54" value="3">(3)</label>
+    <label><input type="radio" name="q54" value="4">(4)</label>
+  </div>
+  <div class="result" id="r54"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（15ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_15.jpg" alt="問題PDF 15ページ">
+  </details>
+</section>
+<section class="question" id="q55" data-q="55" data-group="required">
+  <div class="qhead"><div class="qtitle">問55</div><div class="tag required">必須</div></div>
+  <div class="qtext">55．次は，地質調査業務で用いられる実施工程図について述べたものである。適切なもの一つを選
+び記号（(1)～(4)）で示せ。 
+(1) 曲線式工程図は，クリティカルパスを見つけ工期を最適化する検討に適している。 
+(2) ネットワーク式工程図は，工種毎の関係が複雑な作業には適さない。 
+(3) ガントチャートは，各工程の所要日数が明確で他工種との関係が明確に理解できる。 
+(4) バーチャート工程図は，工種毎の所要日数が明確で，各工種との相関性もある程度理解で
+きる。</div>
+  <div class="choices" role="radiogroup" aria-label="問55の解答">
+    <label><input type="radio" name="q55" value="1">(1)</label>
+    <label><input type="radio" name="q55" value="2">(2)</label>
+    <label><input type="radio" name="q55" value="3">(3)</label>
+    <label><input type="radio" name="q55" value="4">(4)</label>
+  </div>
+  <div class="result" id="r55"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（16ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_16.jpg" alt="問題PDF 16ページ">
+  </details>
+</section>
+<section class="question" id="q56" data-q="56" data-group="required">
+  <div class="qhead"><div class="qtitle">問56</div><div class="tag required">必須</div></div>
+  <div class="qtext">56．下表は，熱中症の分類を示したものである。下表を参考に熱中症の対処について不適切なもの
+一つを選び記号（(1)～(4)）で示せ。 
+ 
+ 
+(1) Ⅰ度の症状の場合は，通常は現場で対処を行う。 
+(2) Ⅱ度以上の症状が確認された場合は，救急車の要請等，医療機関への搬送を行う。 
+(3) 自力で水分を補給できる場合は，一人で冷所に向かわせ休ませる。 
+(4) Ⅲ度の症状の場合は，入院治療が必要となることもある。</div>
+  <div class="choices" role="radiogroup" aria-label="問56の解答">
+    <label><input type="radio" name="q56" value="1">(1)</label>
+    <label><input type="radio" name="q56" value="2">(2)</label>
+    <label><input type="radio" name="q56" value="3">(3)</label>
+    <label><input type="radio" name="q56" value="4">(4)</label>
+  </div>
+  <div class="result" id="r56"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（16ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_16.jpg" alt="問題PDF 16ページ">
+  </details>
+</section>
+<section class="question" id="q57" data-q="57" data-group="required">
+  <div class="qhead"><div class="qtitle">問57</div><div class="tag required">必須</div></div>
+  <div class="qtext">57．次は，気象情報の入手方法について述べたものである。不適切なもの一つを選び記号（(1)～
+(4)）で示せ。 
+(1) 土砂災害に関する情報は，危険度の高まりをリアルタイムで把握することが困難でありHP
+上では公開していない。 
+(2) 河川の防災情報は，国土交通省のほか，地方自治体でもHP 上で公開している。 
+(3) 国土交通省港湾局は，海上の風速や波高に関する総合情報「ナウファス」を公開している。 
+(4) 集中豪雨に関する情報は，気象庁のほか，国土交通省でも高精度レーダ情報を一部の地域
+で公開している。 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+熱中症の重症度の分類 
+分類 
+Ⅰ度 
+めまい・生あくび・筋肉痛・筋肉の硬直（熱痙攣），大量の発汗 
+Ⅱ度 
+頭痛・嘔吐・倦怠感・虚脱感・判断力の低下 
+Ⅲ度 
+意識障害・痙攣発作・手足の運動障害，高体温 
+
+- 16 -</div>
+  <div class="choices" role="radiogroup" aria-label="問57の解答">
+    <label><input type="radio" name="q57" value="1">(1)</label>
+    <label><input type="radio" name="q57" value="2">(2)</label>
+    <label><input type="radio" name="q57" value="3">(3)</label>
+    <label><input type="radio" name="q57" value="4">(4)</label>
+  </div>
+  <div class="result" id="r57"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（16ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_16.jpg" alt="問題PDF 16ページ">
+  </details>
+</section>
+<section class="question" id="q58" data-q="58" data-group="required">
+  <div class="qhead"><div class="qtitle">問58</div><div class="tag required">必須</div></div>
+  <div class="qtext">58．次は，気象警報と注意報について述べたものである。不適切なもの一つを選び記号（(1)～(4)）
+で示せ。 
+(1) 降雨・降雪に関する気象警報には，暴風，暴風雪，大雨（浸水害），大雨（土砂災害）があ
+る。 
+(2) 予想される津波が３ｍの場合は大津波警報，１ｍの場合は津波警報，0.5ｍの場合は津波注
+意報が発令される。 
+(3) 強風注意報が発令されている場合，作業中止基準に近い風が吹く可能性がある。 
+(4) 雷の発生が予想される場合には，発生確率に応じて雷警報が発令される。 
+問59から問102は，選択問題である。 
+以下のＡ群またはＢ群のいずれか一方を任意選択の上，解答すること。 
+
+※Ａ群，Ｂ群の選択は，受験願書で選択記載した主な調査対象「土質」，「岩盤」のい
+ずれかに関わらず，任意で選択することができる。  
+ 
+※Ａ群およびＢ群の両方を解答している場合，選択問題の採点は行わない。
+解答用紙への記入の際は，注意して記入すること。 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+- 18 -</div>
+  <div class="choices" role="radiogroup" aria-label="問58の解答">
+    <label><input type="radio" name="q58" value="1">(1)</label>
+    <label><input type="radio" name="q58" value="2">(2)</label>
+    <label><input type="radio" name="q58" value="3">(3)</label>
+    <label><input type="radio" name="q58" value="4">(4)</label>
+  </div>
+  <div class="result" id="r58"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（17ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_17.jpg" alt="問題PDF 17ページ">
+  </details>
+</section>
+<section class="question" id="q59" data-q="59" data-group="A">
+  <div class="qhead"><div class="qtitle">問59</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">59．次は，ボーリングに使用される機器について述べたものである。不適切なもの一つを選び記号
+（(1)～(4)）で示せ。 
+(1) ロッドホルダーは，ロッドを保持する器具で，浅掘り用の手動式と深掘り用の足踏み式の
+ものがある。 
+(2) ウォータースイベルは，ポンプからの掘削流体を回転しているロッド内に送るための器具
+である。 
+(3) メタルビットは，刃先に超硬チップを植付けたもので，硬岩～超硬岩に適している。 
+(4) ＰＤＣビットは，刃先に合成ダイヤモンドの粉末を焼結したもので，軟岩～中硬岩に適し
+ている。</div>
+  <div class="choices" role="radiogroup" aria-label="問59の解答">
+    <label><input type="radio" name="q59" value="1">(1)</label>
+    <label><input type="radio" name="q59" value="2">(2)</label>
+    <label><input type="radio" name="q59" value="3">(3)</label>
+    <label><input type="radio" name="q59" value="4">(4)</label>
+  </div>
+  <div class="result" id="r59"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（19ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_19.jpg" alt="問題PDF 19ページ">
+  </details>
+</section>
+<section class="question" id="q60" data-q="60" data-group="A">
+  <div class="qhead"><div class="qtitle">問60</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">60．次は，砂れき層の掘進について述べたものである。不適切なもの一つを選び記号（(1)～(4)）
+で示せ。 
+(1) 砂れき層中の地下水の流動性は掘削効率に影響しない。 
+(2) 粘土分が多いほど掘削は容易である。 
+(3) 濃泥水の使用は崩壊を防ぐ目的としても有効である。 
+(4) 大径の硬質れきにあたった場合は，インプリグネイテッドビットの使用も有効である。</div>
+  <div class="choices" role="radiogroup" aria-label="問60の解答">
+    <label><input type="radio" name="q60" value="1">(1)</label>
+    <label><input type="radio" name="q60" value="2">(2)</label>
+    <label><input type="radio" name="q60" value="3">(3)</label>
+    <label><input type="radio" name="q60" value="4">(4)</label>
+  </div>
+  <div class="result" id="r60"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（19ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_19.jpg" alt="問題PDF 19ページ">
+  </details>
+</section>
+<section class="question" id="q61" data-q="61" data-group="A">
+  <div class="qhead"><div class="qtitle">問61</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">61．次は，掘進中に回転トルクが増大し，ポンプ圧が急上昇し始めた場合の原因について述べたも
+のである。適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) ケーシングが切断したため。 
+(2) 粘性土から砂質土へと土質が変わったため。 
+(3) 逸水により泥水循環がなくなったため。 
+(4) 孔壁の押し出し，もしくは崩壊が発生したため。</div>
+  <div class="choices" role="radiogroup" aria-label="問61の解答">
+    <label><input type="radio" name="q61" value="1">(1)</label>
+    <label><input type="radio" name="q61" value="2">(2)</label>
+    <label><input type="radio" name="q61" value="3">(3)</label>
+    <label><input type="radio" name="q61" value="4">(4)</label>
+  </div>
+  <div class="result" id="r61"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（19ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_19.jpg" alt="問題PDF 19ページ">
+  </details>
+</section>
+<section class="question" id="q62" data-q="62" data-group="A">
+  <div class="qhead"><div class="qtitle">問62</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">62．次は，計器設置用のボーリング掘削について述べたものである。不適切なもの一つを選び記号
+（(1)～(4)）で示せ。 
+(1) 孔内泥水が低下した時，孔口からの泥水補給は徐々に行う。 
+(2) コアバレルの挿入および引揚げ作業はゆっくり行う。 
+(3) ビット荷重および回転速度を上げすぎないようにする。 
+(4) 掘削時の泥水圧力を極力抑える。 
+ 
+ 
+ 
+ 
+ 
+
+- 19 -</div>
+  <div class="choices" role="radiogroup" aria-label="問62の解答">
+    <label><input type="radio" name="q62" value="1">(1)</label>
+    <label><input type="radio" name="q62" value="2">(2)</label>
+    <label><input type="radio" name="q62" value="3">(3)</label>
+    <label><input type="radio" name="q62" value="4">(4)</label>
+  </div>
+  <div class="result" id="r62"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（19ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_19.jpg" alt="問題PDF 19ページ">
+  </details>
+</section>
+<section class="question" id="q63" data-q="63" data-group="A">
+  <div class="qhead"><div class="qtitle">問63</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">63．次は，セメンチング作業について述べたものである。不適切なもの一つを選び記号（(1)～(4)）
+で示せ。 
+(1) セメンチングの注入量は，孔内容積のほか送水ポンプ・ホース・ロッドなどの機材容量は
+考慮する必要がない。 
+(2) セメンチング注入時は，ロッド先端に最終削孔径と同等のコアバレルを装着することで，
+孔内がよく撹拌（かくはん）され，泥水との置換効率があがる。 
+(3) セメンチング前に孔内を洗浄して，カッティングスや沈殿物をよく除去することが望まし
+い。 
+(4) セメントミルクの硬化時間調整のため，塩化カルシウムやベントナイトが多く用いられる。</div>
+  <div class="choices" role="radiogroup" aria-label="問63の解答">
+    <label><input type="radio" name="q63" value="1">(1)</label>
+    <label><input type="radio" name="q63" value="2">(2)</label>
+    <label><input type="radio" name="q63" value="3">(3)</label>
+    <label><input type="radio" name="q63" value="4">(4)</label>
+  </div>
+  <div class="result" id="r63"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（20ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_20.jpg" alt="問題PDF 20ページ">
+  </details>
+</section>
+<section class="question" id="q64" data-q="64" data-group="A">
+  <div class="qhead"><div class="qtitle">問64</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">64．次は，ロータリー式三重管サンプラーによる土試料の採取方法（JGS 1223-2012）について述
+べたものである。不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 試料採取後は，サンプラーに衝撃を与えないように静かに引き上げる。 
+(2) サンプラーの押込みが困難となっても，続けて試料長100cm まで試料採取を行う。 
+(3) 押込み終了後，サンプラーの下端の深さを試料採取の終了深さとする。 
+(4) 先端のシューは，鋼性で十分な剛性を有する物を用いる。</div>
+  <div class="choices" role="radiogroup" aria-label="問64の解答">
+    <label><input type="radio" name="q64" value="1">(1)</label>
+    <label><input type="radio" name="q64" value="2">(2)</label>
+    <label><input type="radio" name="q64" value="3">(3)</label>
+    <label><input type="radio" name="q64" value="4">(4)</label>
+  </div>
+  <div class="result" id="r64"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（20ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_20.jpg" alt="問題PDF 20ページ">
+  </details>
+</section>
+<section class="question" id="q65" data-q="65" data-group="A">
+  <div class="qhead"><div class="qtitle">問65</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">65．次は，固定ピストン式シンウォ－ルサンプラーによる土試料の採取（JGS 1221-2012）につい
+て述べたものである。不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 試料採取長さは，90cm 以下とする。 
+(2) 試料採取は，連続的にサンプリングチューブを押し込む。 
+(3) サンプラーを引き上げる時は，ボーリングロッドを回転させて縁切りする。 
+(4) 押し込む事が困難になった場合は，押し込みを中止してサンプラーを引き上げる。</div>
+  <div class="choices" role="radiogroup" aria-label="問65の解答">
+    <label><input type="radio" name="q65" value="1">(1)</label>
+    <label><input type="radio" name="q65" value="2">(2)</label>
+    <label><input type="radio" name="q65" value="3">(3)</label>
+    <label><input type="radio" name="q65" value="4">(4)</label>
+  </div>
+  <div class="result" id="r65"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（20ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_20.jpg" alt="問題PDF 20ページ">
+  </details>
+</section>
+<section class="question" id="q66" data-q="66" data-group="A">
+  <div class="qhead"><div class="qtitle">問66</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">66．次は，標準貫入試験（JIS A 1219：2023）について述べたものである。不適切なもの一つを選
+び記号（(1)～(4)）で示せ。 
+(1) 所定の試験深度まで試験孔を掘削し，試験孔底のカッティングスを取り除く。 
+(2) 試験器具は，孔底に負圧が働かないようにゆっくり引き上げる。 
+(3) 自沈による貫入量が50mm を超えた場合は，予備打ちをしない。 
+(4) ケーシングを用いる場合は，試験深度より下に貫入させない。 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+- 20 -</div>
+  <div class="choices" role="radiogroup" aria-label="問66の解答">
+    <label><input type="radio" name="q66" value="1">(1)</label>
+    <label><input type="radio" name="q66" value="2">(2)</label>
+    <label><input type="radio" name="q66" value="3">(3)</label>
+    <label><input type="radio" name="q66" value="4">(4)</label>
+  </div>
+  <div class="result" id="r66"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（20ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_20.jpg" alt="問題PDF 20ページ">
+  </details>
+</section>
+<section class="question" id="q67" data-q="67" data-group="A">
+  <div class="qhead"><div class="qtitle">問67</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">67．次は，標準貫入試験（JIS A 1219：2023）について述べたものである。不適切なもの一つを選
+び記号（(1)～(4)）で示せ。 
+(1) Ｎ値50 以上と想定される地盤では，予備打ちを本打ちに代えることができる。 
+(2) 本打ちは，特に必要がない限り50 回の打撃回数で打ち切る。 
+(3) 採取した試料は，密閉して保存する。 
+(4) 採取試料が２つの土層にまたがる場合は，代表する１つの土層について記録して報告する。</div>
+  <div class="choices" role="radiogroup" aria-label="問67の解答">
+    <label><input type="radio" name="q67" value="1">(1)</label>
+    <label><input type="radio" name="q67" value="2">(2)</label>
+    <label><input type="radio" name="q67" value="3">(3)</label>
+    <label><input type="radio" name="q67" value="4">(4)</label>
+  </div>
+  <div class="result" id="r67"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（21ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_21.jpg" alt="問題PDF 21ページ">
+  </details>
+</section>
+<section class="question" id="q68" data-q="68" data-group="A">
+  <div class="qhead"><div class="qtitle">問68</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">68．次は，地盤の指標値を求めるためのプレッシャーメータ試験方法（JGS 1531-2012）について
+述べたものである。不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 試験孔の径はプローブ径とほぼ同じに仕上げるものとし，乱れの少ない平滑な孔壁面に仕
+上げる。 
+(2) 硬質土や岩盤では試験数回分までの先行掘削を行った後，試験を実施してもよい。 
+(3) プローブおよびその地上部をつなぐホースの中の気泡は測定後に除去する。 
+(4) プローブゴムチューブを空気中または水中で最大測定範囲まで３回以上膨張させた後に，
+キャリブレーションを行う。</div>
+  <div class="choices" role="radiogroup" aria-label="問68の解答">
+    <label><input type="radio" name="q68" value="1">(1)</label>
+    <label><input type="radio" name="q68" value="2">(2)</label>
+    <label><input type="radio" name="q68" value="3">(3)</label>
+    <label><input type="radio" name="q68" value="4">(4)</label>
+  </div>
+  <div class="result" id="r68"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（21ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_21.jpg" alt="問題PDF 21ページ">
+  </details>
+</section>
+<section class="question" id="q69" data-q="69" data-group="A">
+  <div class="qhead"><div class="qtitle">問69</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">69. 次は，単孔を利用した透水試験方法（JGS 1314-2012）について述べたものである。不適切な
+もの一つを選び記号（(1)～(4)）で示せ。 
+(1) 地下水面より下方の飽和した地盤を対象とする。 
+(2) 非定常法と定常法の２種類があり，地盤の透水性などによって使い分ける。 
+(3) 非定常法は，測定用パイプ内の水位を一時的に低下または上昇させ，平衡状態に戻る時の
+水位変化を測定する。 
+(4) 定常法は，透水係数が10-6m/s 程度以下と予想される砂質，れき質地盤に適している。</div>
+  <div class="choices" role="radiogroup" aria-label="問69の解答">
+    <label><input type="radio" name="q69" value="1">(1)</label>
+    <label><input type="radio" name="q69" value="2">(2)</label>
+    <label><input type="radio" name="q69" value="3">(3)</label>
+    <label><input type="radio" name="q69" value="4">(4)</label>
+  </div>
+  <div class="result" id="r69"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（21ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_21.jpg" alt="問題PDF 21ページ">
+  </details>
+</section>
+<section class="question" id="q70" data-q="70" data-group="A">
+  <div class="qhead"><div class="qtitle">問70</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">70. 次は，地盤の弾性波速度検層方法（JGS 1122-2012）について述べたものである。不適切なも
+の一つを選び記号（(1)～(4)）で示せ。 
+(1) ダウンホール方式は，試験孔の条件として孔内水が必要である。 
+(2) 測定方法は,ダウンホール方式と孔内起振受振方式がある。 
+(3) ダウンホール方式は，地表で起振してボーリング孔内で受振する測定方法である。 
+(4) 孔内起振受振方式は，ケーシングパイプが設置されている深度では測定ができない。 
+0
+20
+40
+60
+80
+100
+120
+0
+50
+100
+150
+200
+塑 性 指 数  IP
+液 性 限 界  W L %
+Ａ線：Ip=0.73(WL-20)
+WL=50%</div>
+  <div class="choices" role="radiogroup" aria-label="問70の解答">
+    <label><input type="radio" name="q70" value="1">(1)</label>
+    <label><input type="radio" name="q70" value="2">(2)</label>
+    <label><input type="radio" name="q70" value="3">(3)</label>
+    <label><input type="radio" name="q70" value="4">(4)</label>
+  </div>
+  <div class="result" id="r70"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（21ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_21.jpg" alt="問題PDF 21ページ">
+  </details>
+</section>
+<section class="question" id="q71" data-q="71" data-group="A">
+  <div class="qhead"><div class="qtitle">問71</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">71．次は，地盤材料の工学的分類方法（JGS 0051-2020）について述べたものである。不適切なも
+の一つを選び記号（(1)～(4)）で示せ。 
+(1) 分類記号{SF}は，小分類の細粒分まじり砂である。 
+(2) 砂質れき(GS)は，三角座標上で細粒分＜5％，砂分≧15 である。 
+(3) 石分とは粒径75mm 以上であり，石分が50％以上含まれるものは岩石質材料である。 
+(4) 粗粒分＞50％，砂分≧れき分は，砂質土[S]である。</div>
+  <div class="choices" role="radiogroup" aria-label="問71の解答">
+    <label><input type="radio" name="q71" value="1">(1)</label>
+    <label><input type="radio" name="q71" value="2">(2)</label>
+    <label><input type="radio" name="q71" value="3">(3)</label>
+    <label><input type="radio" name="q71" value="4">(4)</label>
+  </div>
+  <div class="result" id="r71"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（22ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_22.jpg" alt="問題PDF 22ページ">
+  </details>
+</section>
+<section class="question" id="q72" data-q="72" data-group="A">
+  <div class="qhead"><div class="qtitle">問72</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">72．次は，地盤材料の工学的分類方法（JGS 0051-2020）について述べたものである。不適切なも
+の一つを選び記号（(1)～(4)）で示せ。 
+(1) 大分類では，粗粒土と細粒土を粒径で区分する。 
+(2) 粗粒土の中分類では，れき分と砂分の含有率により区分する。  
+(3) 細粒土の小分類は，塑性図を用いる。 
+(4) 分類記号 [ ]は，大分類である。</div>
+  <div class="choices" role="radiogroup" aria-label="問72の解答">
+    <label><input type="radio" name="q72" value="1">(1)</label>
+    <label><input type="radio" name="q72" value="2">(2)</label>
+    <label><input type="radio" name="q72" value="3">(3)</label>
+    <label><input type="radio" name="q72" value="4">(4)</label>
+  </div>
+  <div class="result" id="r72"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（22ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_22.jpg" alt="問題PDF 22ページ">
+  </details>
+</section>
+<section class="question" id="q73" data-q="73" data-group="A">
+  <div class="qhead"><div class="qtitle">問73</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">73．下図は，細粒土の工学的分類体系において，塑性図で「Ａ線より上に位置し，液性限界WＬ≧50％」
+に該当する分類を示したものである。適切なもの一つを選び記号（(1)～(4))で示せ。 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(1) （CL）粘土 （低液性限界） 
+(2) （ML）シルト（低液性限界） 
+(3) （CH）粘土 （高液性限界） 
+(4) （CL）シルト（高液性限界） 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+- 22 -</div>
+  <div class="choices" role="radiogroup" aria-label="問73の解答">
+    <label><input type="radio" name="q73" value="1">(1)</label>
+    <label><input type="radio" name="q73" value="2">(2)</label>
+    <label><input type="radio" name="q73" value="3">(3)</label>
+    <label><input type="radio" name="q73" value="4">(4)</label>
+  </div>
+  <div class="result" id="r73"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（22ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_22.jpg" alt="問題PDF 22ページ">
+  </details>
+</section>
+<section class="question" id="q74" data-q="74" data-group="A">
+  <div class="qhead"><div class="qtitle">問74</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">74. 下表は，Ｎ値と砂の相対密度の関係をもとに，実測Ｎ値に対応する相対密度を表現したもので
+ある。不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+ 
+記号 
+実測Ｎ値 
+相対密度 
+(1) 
+3 
+非常に緩い 
+(2) 
+15 
+緩 い 
+(3) 
+25 
+中位の 
+(4) 
+35 
+密 な</div>
+  <div class="choices" role="radiogroup" aria-label="問74の解答">
+    <label><input type="radio" name="q74" value="1">(1)</label>
+    <label><input type="radio" name="q74" value="2">(2)</label>
+    <label><input type="radio" name="q74" value="3">(3)</label>
+    <label><input type="radio" name="q74" value="4">(4)</label>
+  </div>
+  <div class="result" id="r74"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（23ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_23.jpg" alt="問題PDF 23ページ">
+  </details>
+</section>
+<section class="question" id="q75" data-q="75" data-group="A">
+  <div class="qhead"><div class="qtitle">問75</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">75. 次は，砂れき地盤の観察記事について述べたものである。不適切なもの一つを選び記号（(1)
+～(4)）で示せ。 
+(1) 淘汰（とうた）されているとは，粒径の大きなものから細かいものまで混じりあっている
+状態を示す。 
+(2) 細粒分の混入は透水係数や孔壁，切羽の崩壊性に影響するので，その混入状況についても
+記載する。 
+(3) れき質の硬さの情報として，メタルクラウンの消耗の程度も記載する。 
+(4) 最大れき径はその確認方法も併せて記載する。</div>
+  <div class="choices" role="radiogroup" aria-label="問75の解答">
+    <label><input type="radio" name="q75" value="1">(1)</label>
+    <label><input type="radio" name="q75" value="2">(2)</label>
+    <label><input type="radio" name="q75" value="3">(3)</label>
+    <label><input type="radio" name="q75" value="4">(4)</label>
+  </div>
+  <div class="result" id="r75"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（23ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_23.jpg" alt="問題PDF 23ページ">
+  </details>
+</section>
+<section class="question" id="q76" data-q="76" data-group="A">
+  <div class="qhead"><div class="qtitle">問76</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">76. 次は，設計・施工の面から，ボーリング調査における観察記事の重要性について述べたもので
+ある。文章中の空欄  Ａ  ～  Ｃ  に当てはまる語句の適切な組合せ一つを選び記号（(1)
+～(4)）で示せ。 
+ 
+ボーリング調査は，杭基礎の施工等に対して，小型の   Ａ   とみなせる場合がある。す
+なわち，  Ｂ   が，そのまま施工時のトラブルや事故を考える上での資料となるのである。
+特に， Ｃ  ，孔壁の崩壊やせり出しなどは重要なデータとなる。 
+ 
+記号 
+Ａ 
+Ｂ 
+Ｃ 
+(1) 
+(2) 
+(3) 
+(4) 
+現場実験 
+土質試験 
+現場実験 
+土質試験 
+サンプリング方法 
+サンプリング方法 
+掘進時の現象 
+掘進時の現象 
+採取試料の乱れ 
+泥水の逸水 
+泥水の逸水 
+採取試料の乱れ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+- 23 -</div>
+  <div class="choices" role="radiogroup" aria-label="問76の解答">
+    <label><input type="radio" name="q76" value="1">(1)</label>
+    <label><input type="radio" name="q76" value="2">(2)</label>
+    <label><input type="radio" name="q76" value="3">(3)</label>
+    <label><input type="radio" name="q76" value="4">(4)</label>
+  </div>
+  <div class="result" id="r76"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（23ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_23.jpg" alt="問題PDF 23ページ">
+  </details>
+</section>
+<section class="question" id="q77" data-q="77" data-group="A">
+  <div class="qhead"><div class="qtitle">問77</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">77．次は，シールド工法における留意すべき地盤を示したものである。不適切なもの一つを選び記
+号（(1)～(4)）で示せ。 
+(1) 被圧地下水や可燃性ガスが賦存する地盤 
+(2) 硬軟の地層が互層状態になっている地盤 
+(3) 鋭敏比の低い軟弱な低塑性の粘性土地盤 
+(4) 玉石および流木などが挟在する地盤</div>
+  <div class="choices" role="radiogroup" aria-label="問77の解答">
+    <label><input type="radio" name="q77" value="1">(1)</label>
+    <label><input type="radio" name="q77" value="2">(2)</label>
+    <label><input type="radio" name="q77" value="3">(3)</label>
+    <label><input type="radio" name="q77" value="4">(4)</label>
+  </div>
+  <div class="result" id="r77"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（24ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_24.jpg" alt="問題PDF 24ページ">
+  </details>
+</section>
+<section class="question" id="q78" data-q="78" data-group="A">
+  <div class="qhead"><div class="qtitle">問78</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">78．次は，孔内水位の観測精度を高める上での留意点を述べたものである。不適切なもの一つを選
+び記号（(1)～(4)）で示せ。 
+(1) 調査ボーリングでは，地下水位を確認するまで無水で掘削することを基本とする。 
+(2) 孔壁の保孔対策として泥水を使用する場合は，泥水位は地下水位とは異なるため日々測定
+する必要はない。 
+(3) 孔壁の保孔対策としてケーシングを挿入する場合は，孔内水位と併せてケーシング打設深度
+を記録する。 
+(4) ボーリング掘進中は，孔内水位とともに湧水や逸水の状況，および掘削循環水の色などを
+注意深く記録する。</div>
+  <div class="choices" role="radiogroup" aria-label="問78の解答">
+    <label><input type="radio" name="q78" value="1">(1)</label>
+    <label><input type="radio" name="q78" value="2">(2)</label>
+    <label><input type="radio" name="q78" value="3">(3)</label>
+    <label><input type="radio" name="q78" value="4">(4)</label>
+  </div>
+  <div class="result" id="r78"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（24ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_24.jpg" alt="問題PDF 24ページ">
+  </details>
+</section>
+<section class="question" id="q79" data-q="79" data-group="A">
+  <div class="qhead"><div class="qtitle">問79</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">79．次は，標準貫入試験で得られるＮ値に与える影響について，ボーリング掘削時に留意すべき事
+項を述べたものである。不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) ボーリングロッド，ＳＰＴサンプラーやアンビルなどの接続部は定期的にチェックし，変
+状が認められたら直ちに交換する。 
+(2) 孔底にカッティングスが多いとＮ値が過小に評価されるため，孔底にカッティングスが溜
+まらないようにする。 
+(3) 掘進中の孔底地盤のボイリングや泥水の過剰送水による孔底の乱れに注意を払う。 
+(4) 玉石が混在する地盤では，なるべく玉石を避けたマトリックス部分で試験を行う。</div>
+  <div class="choices" role="radiogroup" aria-label="問79の解答">
+    <label><input type="radio" name="q79" value="1">(1)</label>
+    <label><input type="radio" name="q79" value="2">(2)</label>
+    <label><input type="radio" name="q79" value="3">(3)</label>
+    <label><input type="radio" name="q79" value="4">(4)</label>
+  </div>
+  <div class="result" id="r79"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（24ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_24.jpg" alt="問題PDF 24ページ">
+  </details>
+</section>
+<section class="question" id="q80" data-q="80" data-group="A">
+  <div class="qhead"><div class="qtitle">問80</div><div class="tag groupA">A群（土質）</div></div>
+  <div class="qtext">80．次は，地盤材料の工学的分類を行うために必要な土質試験を示したものである。適切なもの一
+つを選び記号（(1)～(4)）で示せ。 
+(1) 土の粒度試験（JIS A 1204：2020） 
+(2) 土の一軸圧縮試験（JIS A 1216：2020） 
+(3) 土の湿潤密度試験（JIS A 1225：2020） 
+(4) 締固めた土のコーン指数試験（JIS A 1228：2020） 
+ 
+ 
+ 
+ 
+ 
+
+- 24 -</div>
+  <div class="choices" role="radiogroup" aria-label="問80の解答">
+    <label><input type="radio" name="q80" value="1">(1)</label>
+    <label><input type="radio" name="q80" value="2">(2)</label>
+    <label><input type="radio" name="q80" value="3">(3)</label>
+    <label><input type="radio" name="q80" value="4">(4)</label>
+  </div>
+  <div class="result" id="r80"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（24ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_24.jpg" alt="問題PDF 24ページ">
+  </details>
+</section>
+<section class="question" id="q81" data-q="81" data-group="B">
+  <div class="qhead"><div class="qtitle">問81</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">81．次は，ケーシングの機能を示したものである。文章中の空欄  Ａ  ～  Ｄ  に当てはまる
+語句の適切な組合せ一つを選び記号（(1)～(4)）で示せ。 
+ 
+① 孔壁の   Ａ   防止 
+② 地下水や   Ｂ   の汚染防止 
+③ ワイヤーラインツールスの  Ｃ  とセンタリングなどの仮ケーシング 
+④ ロッドなどの掘具に対する  Ｄ  の軽減 
+ 
+記号 
+Ａ 
+Ｂ 
+Ｃ 
+Ｄ 
+(1)  
+(2)  
+(3)  
+(4)  
+影 響 
+崩 壊 
+崩 壊 
+影 響 
+土 壌 
+温 泉 
+土 壌 
+温 泉 
+振動防止 
+振動防止 
+回転防止 
+回転防止 
+電気抵抗 
+摩擦抵抗 
+摩擦抵抗 
+電気抵抗</div>
+  <div class="choices" role="radiogroup" aria-label="問81の解答">
+    <label><input type="radio" name="q81" value="1">(1)</label>
+    <label><input type="radio" name="q81" value="2">(2)</label>
+    <label><input type="radio" name="q81" value="3">(3)</label>
+    <label><input type="radio" name="q81" value="4">(4)</label>
+  </div>
+  <div class="result" id="r81"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（25ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_25.jpg" alt="問題PDF 25ページ">
+  </details>
+</section>
+<section class="question" id="q82" data-q="82" data-group="B">
+  <div class="qhead"><div class="qtitle">問82</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">82．次は，岩の掘進について述べたものである。不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 粘質な軟岩では，送水圧上昇防止のため，高粘性の泥水を使用するのが一般的である。 
+(2) 亀裂性の中硬岩では，泥水よりケーシングによる孔壁保護が一般的である。 
+(3) 超硬岩では，ダイヤモンドビットのマトリックスの硬さの選択が重要である。 
+(4) 破砕帯では，近年ポリマー系の高粘性泥水を使用することが多い。</div>
+  <div class="choices" role="radiogroup" aria-label="問82の解答">
+    <label><input type="radio" name="q82" value="1">(1)</label>
+    <label><input type="radio" name="q82" value="2">(2)</label>
+    <label><input type="radio" name="q82" value="3">(3)</label>
+    <label><input type="radio" name="q82" value="4">(4)</label>
+  </div>
+  <div class="result" id="r82"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（25ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_25.jpg" alt="問題PDF 25ページ">
+  </details>
+</section>
+<section class="question" id="q83" data-q="83" data-group="B">
+  <div class="qhead"><div class="qtitle">問83</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">83．次は，ワイヤライン工法の特徴について述べたものである。不適切なもの一つを選び記号（(1)
+～(4)）で示せ。 
+(1) 孔壁とロッドの間隙が小さく，カッティングス排出効率が良い。 
+(2) 深度500ｍを超える場合は，従来工法と比べ効率は倍以上である。 
+(3) 泥水管理の徹底が求められる。 
+(4) ロッドが孔壁に接する機会が多く，孔壁が乱れやすい。</div>
+  <div class="choices" role="radiogroup" aria-label="問83の解答">
+    <label><input type="radio" name="q83" value="1">(1)</label>
+    <label><input type="radio" name="q83" value="2">(2)</label>
+    <label><input type="radio" name="q83" value="3">(3)</label>
+    <label><input type="radio" name="q83" value="4">(4)</label>
+  </div>
+  <div class="result" id="r83"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（25ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_25.jpg" alt="問題PDF 25ページ">
+  </details>
+</section>
+<section class="question" id="q84" data-q="84" data-group="B">
+  <div class="qhead"><div class="qtitle">問84</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">84．次は，孔曲がりが発生しやすい地盤の特徴を示したものである。不適切なもの一つを選び記号
+（(1)～(4)）で示せ。 
+(1) 層理・片理・節理などが発達した地盤 
+(2) 硬軟の差がほとんどない互層 
+(3) 破砕帯 
+(4) 空洞の多い地盤 
+ 
+ 
+
+- 25 -</div>
+  <div class="choices" role="radiogroup" aria-label="問84の解答">
+    <label><input type="radio" name="q84" value="1">(1)</label>
+    <label><input type="radio" name="q84" value="2">(2)</label>
+    <label><input type="radio" name="q84" value="3">(3)</label>
+    <label><input type="radio" name="q84" value="4">(4)</label>
+  </div>
+  <div class="result" id="r84"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（25ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_25.jpg" alt="問題PDF 25ページ">
+  </details>
+</section>
+<section class="question" id="q85" data-q="85" data-group="B">
+  <div class="qhead"><div class="qtitle">問85</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">85．次は，スイベル型ダブルチューブの注意点について述べたものである。不適切なもの一つを選
+び記号（(1)～(4)）で示せ。 
+(1) ダブルコアチューブの整備を完全にする。 
+(2) 回転・送水量の調整として，一般的に高回転・高送水量にする。 
+(3) コア詰まりが発生した場合は，直ちにコアチューブを回収しコアを排除する。 
+(4) ダイヤモンドビットを使用する。</div>
+  <div class="choices" role="radiogroup" aria-label="問85の解答">
+    <label><input type="radio" name="q85" value="1">(1)</label>
+    <label><input type="radio" name="q85" value="2">(2)</label>
+    <label><input type="radio" name="q85" value="3">(3)</label>
+    <label><input type="radio" name="q85" value="4">(4)</label>
+  </div>
+  <div class="result" id="r85"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（26ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_26.jpg" alt="問題PDF 26ページ">
+  </details>
+</section>
+<section class="question" id="q86" data-q="86" data-group="B">
+  <div class="qhead"><div class="qtitle">問86</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">86．次は，岩盤コア採取のＲＱＤについて述べたものある。適切なもの一つを選び記号（(1)～(4)）
+で示せ。 
+(1) ボーリング削孔長100cm 中に対する30cm 以上の長さのコアの累計長割合（％）である。 
+(2) 岩盤が良くなるほどＲＱＤ値は小さくなる。 
+(3) ＲＱＤの算出において掘進中あるいはコア整理で生じた割れ目は考慮しない。 
+(4) ＲＱＤは岩盤の硬さを表す指数である。</div>
+  <div class="choices" role="radiogroup" aria-label="問86の解答">
+    <label><input type="radio" name="q86" value="1">(1)</label>
+    <label><input type="radio" name="q86" value="2">(2)</label>
+    <label><input type="radio" name="q86" value="3">(3)</label>
+    <label><input type="radio" name="q86" value="4">(4)</label>
+  </div>
+  <div class="result" id="r86"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（26ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_26.jpg" alt="問題PDF 26ページ">
+  </details>
+</section>
+<section class="question" id="q87" data-q="87" data-group="B">
+  <div class="qhead"><div class="qtitle">問87</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">87．次は，孔曲がりの原因について述べたものである。不適切なもの一つを選び記号（(1)～(4)）
+で示せ。 
+(1) 孔径に対して著しく小さい径のロッドや短いコアバレルを使用した。 
+(2) 磨耗したロッドや薄肉のロッドを使用した。 
+(3) 孔底の残留カッティングスが増加した。 
+(4) 層理，片理，節理など割れ目の発達した岩盤の掘削が続いた。</div>
+  <div class="choices" role="radiogroup" aria-label="問87の解答">
+    <label><input type="radio" name="q87" value="1">(1)</label>
+    <label><input type="radio" name="q87" value="2">(2)</label>
+    <label><input type="radio" name="q87" value="3">(3)</label>
+    <label><input type="radio" name="q87" value="4">(4)</label>
+  </div>
+  <div class="result" id="r87"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（26ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_26.jpg" alt="問題PDF 26ページ">
+  </details>
+</section>
+<section class="question" id="q88" data-q="88" data-group="B">
+  <div class="qhead"><div class="qtitle">問88</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">88．次は，高品質ボーリングについて述べたものである。適切なもの一つを選び記号（(1)～(4)）
+で示せ。 
+(1) 硬岩掘削に使用するダイヤモンドビットは，大粒のダイヤと硬いマトリックスの組合わせ
+にする。 
+(2) 軟岩を掘進する場合は，コアの断面積が小さいほどコア採取率が高い。 
+(3) 低回転・高給圧で掘進すると，孔曲がりし難い。 
+(4) 掘進速度は，一般にビット荷重と回転数に比例し，孔径に反比例する。 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+- 26 -</div>
+  <div class="choices" role="radiogroup" aria-label="問88の解答">
+    <label><input type="radio" name="q88" value="1">(1)</label>
+    <label><input type="radio" name="q88" value="2">(2)</label>
+    <label><input type="radio" name="q88" value="3">(3)</label>
+    <label><input type="radio" name="q88" value="4">(4)</label>
+  </div>
+  <div class="result" id="r88"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（26ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_26.jpg" alt="問題PDF 26ページ">
+  </details>
+</section>
+<section class="question" id="q89" data-q="89" data-group="B">
+  <div class="qhead"><div class="qtitle">問89</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">89．次は，高品質ボーリングについて述べたものである。不適切なもの一つを選び記号（(1)～(4)）
+で示せ。 
+(1) 回転数・給圧・送水量などを制御しながら，最適な条件となるよう掘進する。 
+(2) 発泡流体などの高性能循環流体を使用して掘進する。 
+(3) 機材準備が少ないため，従来工法と比べ掘進スピードは著しく向上する。 
+(4) 循環流体とコアの接触を遮断するため，スリーブ内蔵型サンプラーを使用する。</div>
+  <div class="choices" role="radiogroup" aria-label="問89の解答">
+    <label><input type="radio" name="q89" value="1">(1)</label>
+    <label><input type="radio" name="q89" value="2">(2)</label>
+    <label><input type="radio" name="q89" value="3">(3)</label>
+    <label><input type="radio" name="q89" value="4">(4)</label>
+  </div>
+  <div class="result" id="r89"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（27ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_27.jpg" alt="問題PDF 27ページ">
+  </details>
+</section>
+<section class="question" id="q90" data-q="90" data-group="B">
+  <div class="qhead"><div class="qtitle">問90</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">90．次は，ロータリー式チューブサンプリングによる軟岩試料の採取（JGS 3211-2012）について
+述べたものである。不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) サンプラーから試料を取り出す場合は，しばらく時間をおいてからとする。 
+(2) サンプラーから試料を取り出す場合は，曲げを与えないようにコア受けを用いる。 
+(3) 試料からスリーブを外す場合は，試料に損傷を与えないようにする。 
+(4) 採取地点でスリーブから試料を取り出さない方が試料を乱さないと判断される場合は，作
+業を室内で行う。</div>
+  <div class="choices" role="radiogroup" aria-label="問90の解答">
+    <label><input type="radio" name="q90" value="1">(1)</label>
+    <label><input type="radio" name="q90" value="2">(2)</label>
+    <label><input type="radio" name="q90" value="3">(3)</label>
+    <label><input type="radio" name="q90" value="4">(4)</label>
+  </div>
+  <div class="result" id="r90"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（27ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_27.jpg" alt="問題PDF 27ページ">
+  </details>
+</section>
+<section class="question" id="q91" data-q="91" data-group="B">
+  <div class="qhead"><div class="qtitle">問91</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">91．次は，ロータリー式チューブサンプリングによる軟岩試料の採取（JGS 3211-2012）について
+述べたものである。不適切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 岩盤掘削において，スリーブ内蔵二重管サンプラーはビット先行型を適用する。 
+(2) 岩盤調査では，サンプラーヘッドにリーミングシェルを装着することが多い。 
+(3) リーミングシェルは，ビットのセンタリングおよび拡孔の役割を果たす。 
+(4) リフターケースは，ビット先行型サンプラーのインナーチューブ下端部に取り付ける。</div>
+  <div class="choices" role="radiogroup" aria-label="問91の解答">
+    <label><input type="radio" name="q91" value="1">(1)</label>
+    <label><input type="radio" name="q91" value="2">(2)</label>
+    <label><input type="radio" name="q91" value="3">(3)</label>
+    <label><input type="radio" name="q91" value="4">(4)</label>
+  </div>
+  <div class="result" id="r91"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（27ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_27.jpg" alt="問題PDF 27ページ">
+  </details>
+</section>
+<section class="question" id="q92" data-q="92" data-group="B">
+  <div class="qhead"><div class="qtitle">問92</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">92．次は，注水による岩盤の透水試験方法（JGS 1322-2012）について述べたものである。不適切
+なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 水位測定器は１cm 単位で読み取り可能なものを使用する。 
+(2) 既存の横坑やボーリング孔などの影響を受けない範囲に試験孔の位置を選定する。 
+(3) 注水管内の水位を水位測定器により一定変位ごとの時間を測定する。 
+(4) 岩盤の地質状況に応じて試験区間の深さを求める。 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+- 27 -</div>
+  <div class="choices" role="radiogroup" aria-label="問92の解答">
+    <label><input type="radio" name="q92" value="1">(1)</label>
+    <label><input type="radio" name="q92" value="2">(2)</label>
+    <label><input type="radio" name="q92" value="3">(3)</label>
+    <label><input type="radio" name="q92" value="4">(4)</label>
+  </div>
+  <div class="result" id="r92"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（27ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_27.jpg" alt="問題PDF 27ページ">
+  </details>
+</section>
+<section class="question" id="q93" data-q="93" data-group="B">
+  <div class="qhead"><div class="qtitle">問93</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">93．次は，地すべり移動体を構成する破砕岩類について述べたものである。不適切なもの一つを選
+び記号（(1)～(4)）で示せ。 
+(1) 地すべり移動体を構成する岩盤は，地すべり運動によって破砕する。 
+(2) 地すべり起源の破砕岩と造構起源の破砕岩はよく類似している。 
+(3) 破砕の状態が角れき岩の場合，明瞭な複合面構造が認められる。 
+(4) 破砕の程度を区分するためには，高品質ボーリングによるコア採取が有効である。</div>
+  <div class="choices" role="radiogroup" aria-label="問93の解答">
+    <label><input type="radio" name="q93" value="1">(1)</label>
+    <label><input type="radio" name="q93" value="2">(2)</label>
+    <label><input type="radio" name="q93" value="3">(3)</label>
+    <label><input type="radio" name="q93" value="4">(4)</label>
+  </div>
+  <div class="result" id="r93"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（28ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_28.jpg" alt="問題PDF 28ページ">
+  </details>
+</section>
+<section class="question" id="q94" data-q="94" data-group="B">
+  <div class="qhead"><div class="qtitle">問94</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">94．下表は，工学的地質区分名(模様)の断層・破砕帯の補助模様の組合せを示したものである。不
+適切なもの一つを選び記号（(1)～(4)）で示せ。 
+ 
+記号 
+性状 
+模様 
+(1) 
+シェードタキライト化 
+ 
+(2) 
+マイロナイト化 
+ 
+(3) 
+カタクラサイト化 
+ 
+(4) 
+角れき化</div>
+  <div class="choices" role="radiogroup" aria-label="問94の解答">
+    <label><input type="radio" name="q94" value="1">(1)</label>
+    <label><input type="radio" name="q94" value="2">(2)</label>
+    <label><input type="radio" name="q94" value="3">(3)</label>
+    <label><input type="radio" name="q94" value="4">(4)</label>
+  </div>
+  <div class="result" id="r94"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（28ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_28.jpg" alt="問題PDF 28ページ">
+  </details>
+</section>
+<section class="question" id="q95" data-q="95" data-group="B">
+  <div class="qhead"><div class="qtitle">問95</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">95．次は，熱水変質の程度の区分について述べたものである。不適切なもの一つを選び記号（(1)
+～(4)）で示せ。 
+(1) 非変質は，肉眼的に変質鉱物の存在が認められない。 
+(2) 弱変質は，原岩組織が不完全な状態が多くなり，変質程度（脱色）が高く，非変質部の割
+合が低い。 
+(3) 中変質は，肉眼で変質が進んでいると判定できるが，原岩組織を明らかに残し，原岩判定
+が容易である。 
+(4) 強変質は，構成鉱物，岩片等が変質鉱物で完全置換され，原岩組織を全く～殆ど残さない。 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+- 28 -</div>
+  <div class="choices" role="radiogroup" aria-label="問95の解答">
+    <label><input type="radio" name="q95" value="1">(1)</label>
+    <label><input type="radio" name="q95" value="2">(2)</label>
+    <label><input type="radio" name="q95" value="3">(3)</label>
+    <label><input type="radio" name="q95" value="4">(4)</label>
+  </div>
+  <div class="result" id="r95"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（28ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_28.jpg" alt="問題PDF 28ページ">
+  </details>
+</section>
+<section class="question" id="q96" data-q="96" data-group="B">
+  <div class="qhead"><div class="qtitle">問96</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">96. 次は，岩盤ボーリングのコアを，コア箱に保管する際の留意点について述べたものである。適
+切なもの一つを選び記号（(1)～(4)）で示せ。 
+(1) 使用するコア箱は，長方形の外形で，内寸法で長さ100cm のものとする。 
+(2) コア箱に収納する際にコア長を調整する必要がある場合，ハンマー等で割る。 
+(3) 縁板および仕切板には，コア箱の右側から10cm ごとの目盛を入れる。 
+(4) コア箱の蓋は，原則として取り外し可能なものとする。</div>
+  <div class="choices" role="radiogroup" aria-label="問96の解答">
+    <label><input type="radio" name="q96" value="1">(1)</label>
+    <label><input type="radio" name="q96" value="2">(2)</label>
+    <label><input type="radio" name="q96" value="3">(3)</label>
+    <label><input type="radio" name="q96" value="4">(4)</label>
+  </div>
+  <div class="result" id="r96"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（29ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_29.jpg" alt="問題PDF 29ページ">
+  </details>
+</section>
+<section class="question" id="q97" data-q="97" data-group="B">
+  <div class="qhead"><div class="qtitle">問97</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">97. 下表は，ボーリング柱状図に記載する，一般的な岩石または岩相名とその模様の組合せを示し
+たものである。適切なもの一つを選び記号（(1)～(4)）で示せ。 
+ 
+記号 
+岩石・岩相名 
+模様 
+(1) 
+凝 灰 岩 
+ 
+(2) 
+蛇
+紋
+岩 
+ 
+(3) 
+石
+灰
+岩 
+ 
+(4) 
+デイサイト</div>
+  <div class="choices" role="radiogroup" aria-label="問97の解答">
+    <label><input type="radio" name="q97" value="1">(1)</label>
+    <label><input type="radio" name="q97" value="2">(2)</label>
+    <label><input type="radio" name="q97" value="3">(3)</label>
+    <label><input type="radio" name="q97" value="4">(4)</label>
+  </div>
+  <div class="result" id="r97"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（29ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_29.jpg" alt="問題PDF 29ページ">
+  </details>
+</section>
+<section class="question" id="q98" data-q="98" data-group="B">
+  <div class="qhead"><div class="qtitle">問98</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">98．下表は，ボーリング柱状図に記載する地質情報の項目とその記載事項を示したものである。表
+中の空欄  Ａ  ～  Ｃ  に当てはまる語句の適切な組合せ一つを選び記号（(1)～(4)）で示
+せ。 
+ 
+項 目 
+記載事項 
+コアの色調 
+ Ａ  状態の色を記載する。 
+コアの  Ｂ  
+ハンマーの打撃音，割れ方，指でつぶせるなどで何段
+階かに分けて表示する。 
+孔内水位 
+掘削中は毎日  Ｃ  の測定値を記載する。掘削完了
+後は2～3 日後に測定して最終水位とする。 
+ 
+記号 
+Ａ 
+Ｂ 
+Ｃ 
+(1) 
+(2) 
+(3) 
+(4) 
+乾 燥 
+湿 潤 
+乾 燥 
+湿 潤 
+硬 軟 
+硬 軟 
+岩級区分 
+岩級区分 
+作業終了後 
+作業開始前 
+作業開始前 
+作業終了後 
+ 
+ 
+
+- 29 -</div>
+  <div class="choices" role="radiogroup" aria-label="問98の解答">
+    <label><input type="radio" name="q98" value="1">(1)</label>
+    <label><input type="radio" name="q98" value="2">(2)</label>
+    <label><input type="radio" name="q98" value="3">(3)</label>
+    <label><input type="radio" name="q98" value="4">(4)</label>
+  </div>
+  <div class="result" id="r98"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（29ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_29.jpg" alt="問題PDF 29ページ">
+  </details>
+</section>
+<section class="question" id="q99" data-q="99" data-group="B">
+  <div class="qhead"><div class="qtitle">問99</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">99．次は，電気探査（比抵抗法二次元探査）について述べたものである。不適切なもの一つを選び
+記号（(1)～(4)）で示せ。 
+(1) 平野から山岳地まで適用できる場所が多い。 
+(2) 探査深度が深くなるほど分解能は低下する。 
+(3) 泥岩は一般的に比抵抗値が低い。 
+(4) 地下水が存在すると比抵抗値が高くなる。</div>
+  <div class="choices" role="radiogroup" aria-label="問99の解答">
+    <label><input type="radio" name="q99" value="1">(1)</label>
+    <label><input type="radio" name="q99" value="2">(2)</label>
+    <label><input type="radio" name="q99" value="3">(3)</label>
+    <label><input type="radio" name="q99" value="4">(4)</label>
+  </div>
+  <div class="result" id="r99"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（30ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_30.jpg" alt="問題PDF 30ページ">
+  </details>
+</section>
+<section class="question" id="q100" data-q="100" data-group="B">
+  <div class="qhead"><div class="qtitle">問100</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">100．次は，山岳トンネル調査の特徴について述べたものである。不適切なもの一つを選び記号（(1)
+～(4)）で示せ。 
+(1) トンネル工事は，掘削する地山の条件により施工方法が違い，必要となる地盤情報も異な
+る。 
+(2) 施工箇所の大部分が地下深部に位置することから，ボーリングなどの直接的情報の収集が
+主体となる。 
+(3) 段階的な調査により精度を向上させ，各段階で必要な情報収集を行う必要がある。 
+(4) 事前に地質および地下水状況など完全に把握することは困難なため，施工中にも調査を実
+施し，地山条件の変化に応じた施工を実施する。</div>
+  <div class="choices" role="radiogroup" aria-label="問100の解答">
+    <label><input type="radio" name="q100" value="1">(1)</label>
+    <label><input type="radio" name="q100" value="2">(2)</label>
+    <label><input type="radio" name="q100" value="3">(3)</label>
+    <label><input type="radio" name="q100" value="4">(4)</label>
+  </div>
+  <div class="result" id="r100"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（30ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_30.jpg" alt="問題PDF 30ページ">
+  </details>
+</section>
+<section class="question" id="q101" data-q="101" data-group="B">
+  <div class="qhead"><div class="qtitle">問101</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">101. 次は，熱水変質について述べたものである。不適切なもの一つを選び記号（(1)～(4)）で示
+せ。 
+(1) 熱水と岩石の反応である。 
+(2) 熱水の成分や温度,原岩の種類により生成する鉱物が異なる。 
+(3) 断層に沿って生じるため,変質帯の位置および範囲を特定できる。 
+(4) 生じている範囲を熱水変質帯という。</div>
+  <div class="choices" role="radiogroup" aria-label="問101の解答">
+    <label><input type="radio" name="q101" value="1">(1)</label>
+    <label><input type="radio" name="q101" value="2">(2)</label>
+    <label><input type="radio" name="q101" value="3">(3)</label>
+    <label><input type="radio" name="q101" value="4">(4)</label>
+  </div>
+  <div class="result" id="r101"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（30ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_30.jpg" alt="問題PDF 30ページ">
+  </details>
+</section>
+<section class="question" id="q102" data-q="102" data-group="B">
+  <div class="qhead"><div class="qtitle">問102</div><div class="tag groupB">B群（岩盤）</div></div>
+  <div class="qtext">102．次は，岩石の圧裂引張り試験方法（JGS 2551-2020）について述べたものである。不適切なも
+の一つを選び記号（(1)～(4)）で示せ。 
+(1) 供試体の亀裂等は，試験結果に影響しない。 
+(2) 供試体の長さは，直径の0.5～１倍を標準とする。 
+(3) 供試体の直径は，50～100mm を標準とする。 
+(4) 粗粒結晶を持つ岩石やれき岩を対象とする場合には，供試体の直径および長さは，構成粒
+子の最大寸法の５倍以上が望ましい。 
+        Ⅶ．記述式問題 (2問)     
+ 
+以下の問いに対する解答を答案用紙（その２）に記述せよ。 
+ 
+第１問 
+ボーリング作業計画の作成について，下表の選択番号①～⑥に示す項目から２つを選び，それぞ
+れ作業計画を立案するうえでの留意点について，答案用紙の所定の欄に記述せよ。 
+ 
+選択番号 
+作業計画時の着目点 
+① 
+調査目的 
+② 
+調査場所 
+③ 
+気象・海象 
+④ 
+地 質 
+⑤ 
+掘削深度 
+⑥ 
+作業面積 
+ 
+ 
+ 
+第２問 
+地質調査は地中の状態を知ることが目的であるため，コア観察は最も基本的かつ重要なことである。 
+コア観察により明らかとなる，ボーリング柱状図への記載項目について，答案用紙の所定の欄に
+６つ記述せよ。</div>
+  <div class="choices" role="radiogroup" aria-label="問102の解答">
+    <label><input type="radio" name="q102" value="1">(1)</label>
+    <label><input type="radio" name="q102" value="2">(2)</label>
+    <label><input type="radio" name="q102" value="3">(3)</label>
+    <label><input type="radio" name="q102" value="4">(4)</label>
+  </div>
+  <div class="result" id="r102"></div>
+  <details>
+    <summary>図表・イラスト確認用：PDF紙面（30ページ）を表示</summary>
+    <img class="pageimg" src="assets/pages/page_30.jpg" alt="問題PDF 30ページ">
+  </details>
+</section>
+</main><script>
+const ANSWERS = {"1": 1, "31": 4, "59": 3, "81": 2, "2": 4, "32": 2, "60": 1, "82": 1, "3": 1, "33": 3, "61": 4, "83": 4, "4": 1, "34": 3, "62": 1, "84": 2, "5": 1, "35": 4, "63": 1, "85": 2, "6": 2, "36": 4, "64": 2, "86": 3, "7": 3, "37": 2, "65": 3, "87": 3, "8": 2, "38": 3, "66": 3, "88": 4, "9": 3, "39": 2, "67": 4, "89": 3, "10": 4, "40": 1, "68": 3, "90": 1, "11": 4, "41": 2, "69": 4, "91": 2, "12": 1, "42": 2, "70": 1, "92": 3, "13": 2, "43": 4, "71": 1, "93": 3, "14": 3, "44": 3, "72": 2, "94": 4, "15": 1, "45": 2, "73": 3, "95": 2, "16": 3, "46": 3, "74": 2, "96": 4, "17": 1, "47": 2, "75": 1, "97": 1, "18": 4, "48": 1, "76": 3, "98": 2, "19": 3, "49": 4, "77": 3, "99": 4, "20": 4, "50": 4, "78": 2, "100": 2, "21": 1, "51": 1, "79": 2, "101": 3, "22": 2, "52": 4, "80": 1, "102": 1, "23": 3, "53": 3, "24": 3, "54": 1, "25": 3, "55": 4, "26": 4, "56": 3, "27": 1, "57": 1, "28": 2, "58": 4, "29": 2, "30": 4};
+const TOTAL = 102;
+function $(id){return document.getElementById(id)}
+function selected(n){const el=document.querySelector(`input[name="q${n}"]:checked`);return el?Number(el.value):null;}
+function save(){const data={};for(let n=1;n<=TOTAL;n++){const v=selected(n);if(v)data[n]=v;}localStorage.setItem('r07_field_survey_answers',JSON.stringify(data));updateProgress();}
+function load(){try{const data=JSON.parse(localStorage.getItem('r07_field_survey_answers')||'{}');for(const [n,v] of Object.entries(data)){const el=document.querySelector(`input[name="q${n}"][value="${v}"]`);if(el)el.checked=true;}}catch(e){}updateProgress();}
+function updateProgress(){let answered=0;for(let n=1;n<=TOTAL;n++) if(selected(n)) answered++; $('progress').textContent=`回答済み ${answered} / ${TOTAL}`;}
+function grade(){let correct=0,answered=0;let wrong=[];for(let n=1;n<=TOTAL;n++){const v=selected(n);const r=$('r'+n);r.className='result';if(!v){r.textContent=`未回答（正解：${ANSWERS[n]}）`;r.classList.add('ng');wrong.push(n);continue;}answered++;if(v===ANSWERS[n]){correct++;r.textContent=`○ 正解（あなた：${v}）`;r.classList.add('ok');}else{r.textContent=`× 不正解（あなた：${v} / 正解：${ANSWERS[n]}）`;r.classList.add('ng');wrong.push(n);}}
+ const rate=(correct/TOTAL*100).toFixed(1);$('score').innerHTML=`得点：${correct} / ${TOTAL}　正答率：${rate}%　未回答：${TOTAL-answered}問`;
+ localStorage.setItem('r07_field_survey_last_score',JSON.stringify({correct,answered,wrong,date:new Date().toISOString()}));
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+function clearAll(){if(!confirm('回答と採点結果をリセットしますか？'))return;document.querySelectorAll('input[type=radio]').forEach(e=>e.checked=false);document.querySelectorAll('.result').forEach(e=>{e.textContent='';e.className='result';});localStorage.removeItem('r07_field_survey_answers');$('score').textContent='';updateProgress();}
+function showFilter(type){document.querySelectorAll('.question').forEach(q=>{const g=q.dataset.group; q.classList.toggle('hidden', !(type==='all'||g===type));});}
+document.addEventListener('change',e=>{if(e.target.matches('input[type=radio]')) save();});
+document.addEventListener('DOMContentLoaded',()=>{load();$('jsstatus').textContent='JavaScript：正常に読み込み済み（採点できます）';});
+</script></body></html>
